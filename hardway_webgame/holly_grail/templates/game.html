@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>Holly Grail</title>
+</head>
+<body>
+
+$if message:
+ <em style="color: green; font-size:
+2em;">$message</em>.
+$else:
+<em>No</em>, message
+
+<h1>What do next</h1>
+<form action="/hello" method="POST">
+Action: <input type="text" name="greet">
+<br/>
+<input type="submit">
+</form>
+
+
+</body>
+</html>
