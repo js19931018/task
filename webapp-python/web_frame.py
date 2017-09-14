@@ -11,13 +11,13 @@ import time
 from db import next_id
 from db import Dict
 from transwarp_orm import Model, StringField, BooleanField, FloatField, TextField
-from flask import Flask, request, render_template,flash,redirect,url_for,make_response
+from flask import Flask, request, render_template,flash,redirect,url_for,make_response,jsonify
 from apis import api
 
 login_mess={}
 ctx=threading.local()
 _RE_MD5 = re.compile(r'^[0-9a-f]{32}$')
-
+max_age = 604800
 class APIError(Exception):
     def __init__(self,name):
         Exception.__init__(self)
@@ -110,7 +110,8 @@ def home():
 
     user_info=request.cookies.get('user_info')
     user_name=request.cookies.get('user_name')
-    homecookie={'user_info':user_info,'user_name':user_name}
+    user_status=request.cookies.get('log_status')
+    homecookie={'user_info':user_info,'user_name':user_name,'log_status':user_status}
     checkresult=parse_signed_cookie(homecookie)
     if checkresult==True:
         b = MyModel.Blog()
@@ -118,8 +119,9 @@ def home():
         list_blogs = b.select()
         dict_usr = u.select_one('id', user_name)
         print 'listblogs:',list_blogs
-        return render_template('blogs.html',blogs=list_blogs,user=dict_usr)
-
+        return render_template('blogs.html',blogs=list_blogs,user=dict_usr['name'])
+    else:
+        return redirect(url_for('authenticate_page'))
 @app.route('/login', methods=['GET'])
 def log_in_form():
     return render_template('form.html')
@@ -206,10 +208,9 @@ def api_blogs_bypage():
     print 'ctx.get_page_index',ctx.get_page_index
     blogs,page=_get_blogs_by_page()
     print blogs,page
-    r=json.dumps({'page':page.message,'blogs':blogs})
+    r=jsonify(page=page.message,blogs=blogs)
     print r
     return r
-
 
 
 
@@ -220,7 +221,6 @@ def register_page():
 
 @app.route('/register',methods=['POST'])
 def register_user():
-    max_age = 604800
     ctx.username=request.form['name']
     ctx.useremail=request.form['email']
     ctx.userpassword=request.form['password2']
@@ -264,12 +264,20 @@ def authenticate():
         print 'ctx:',ctx.useremail
         print 'ctx:',ctx.userpassword
         raise APIError('password')
-    max_age = 604800
+
     ctx.response=make_response(redirect(url_for('home')))
     ctx.response.set_cookie('user_info',ctx.userpassword,max_age=max_age)
     ctx.response.set_cookie('user_name',ctx.username,max_age=max_age)
-
+    ctx.response.set_cookie('log_status','True',max_age=max_age)
     return ctx.response
+
+@app.route('/signout',methods=['GET'])
+def signout():
+    ctx.response=make_response(redirect((url_for('home'))))
+    ctx.response.set_cookie('log_status','False',max_age=max_age)
+    return ctx.response
+
+
 
 @app.route('/get_cookie',methods=['GET'])
 def get_cookie():
@@ -284,7 +292,8 @@ def create_blog_page():
 def update_blog_page():
     user_info = request.cookies.get('user_info')
     user_name = request.cookies.get('user_name')
-    homecookie = {'user_info': user_info, 'user_name': user_name}
+    user_status = request.cookies.get('log_status')
+    homecookie = {'user_info': user_info, 'user_name': user_name,'log_status':user_status}
     checkresult = parse_signed_cookie(homecookie)
     if checkresult:
         ctx.blogname=request.form['name']
@@ -293,31 +302,71 @@ def update_blog_page():
         print 'ctx:',ctx.blogname
         u=MyModel.User()
         user=u.select_one('id',user_name)
-        b=MyModel.Blog(user_id=user_name,user_name=user['name'],name=ctx.blogname,summary=ctx.blogsummary,content=ctx.blogcontent)
+        b=MyModel.Blog(user_id=user_name,user_name=user['name'],name=ctx.blogname,summary=ctx.blogsummary,content=ctx.blogcontent,id=next_id(),created_at=time.time())
         b.insert_one()
         return  redirect(url_for('home'))
     else:
         return  redirect(url_for('authenticate_page'))
 
 @app.route('/blogs_by_page',methods=['GET'])
+def get_manage_blog_list():
+    return render_template('blogpage.html')
+
+@app.route('/blogs_by_page',methods=['POST'])
 def manage_blog_list():
-    return render_template('manage_blog_list.html')
+    user_info = request.cookies.get('user_info')
+    user_name = request.cookies.get('user_name')
+    user_status=request.cookies.get('log_status')
+    homecookie = {'user_info': user_info, 'user_name': user_name,'log_status':user_status}
+    checkresult = parse_signed_cookie(homecookie)
+    if checkresult:
+        ctx.get_page_index = request.form['page']
+        print 'ctx.get_page_index', ctx.get_page_index
+        blogs, page = _get_blogs_by_page()
+        print blogs, page
+        return render_template('manage_blog_list.html',blogs=blogs,user=user_name)
+
+@app.route('/blog/<blog_id>',methods=['GET'])
+def get_blog_detail(blog_id):
+    b=MyModel.Blog()
+    blog=b.select_one('id',blog_id)
+    c=MyModel.Comment()
+    comments=c.select_some('blog_id',blog_id)
+    print 'comments:',comments
+    return render_template('blog_detail.html',blog=blog,comments=comments)
+
+@app.route('/comment_submit',methods=['POST'])
+def comment_submit():
+    user_info = request.cookies.get('user_info')
+    user_name = request.cookies.get('user_name')
+    user_status = request.cookies.get('log_status')
+    homecookie = {'user_info': user_info, 'user_name': user_name, 'log_status': user_status}
+    checkresult = parse_signed_cookie(homecookie)
+    if checkresult:
+        comment=request.form['comment']
+        blog_id=request.form['blog_id']
+        c=MyModel.Comment(id=next_id(),blog_id=blog_id,user_id=user_name,content=comment,created_at=time.time())
+        c.insert_one()
+        return redirect(url_for('home'))
+
 
 
 def parse_signed_cookie(cookie):
     id=cookie['user_name']
     pw=cookie['user_info']
-    if not cookie:
+    st=cookie['log_status']
+    if not cookie or not(st=='True'):
         return False
-    elif ctx.userpassword:
-        print 'ctx.userpassword:',ctx.userpassword,'cookie:',cookie
-        if ctx.userpassword==pw:
-            return True
-    elif cookie:
+
+    else:
         u=MyModel.User()
         user=u.select_one('id',id)
+        print 'cookie message',id,pw,st
+        print 'password check',user['password'],pw
         if user['password']==pw:
             return True
+        else:
+            return False
 
 
 

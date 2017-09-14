@@ -1,6 +1,6 @@
 {% extends '__base__.html' %}
 
-{% block title %}日志{% endblock %}
+{% block title %}Blog{% endblock %}
 
 {% block content %}
 
@@ -8,9 +8,9 @@
     {% for blog in blogs %}
         <article class="uk-article">
             <h2><a href="/blog/{{ blog.id }}">{{ blog.name }}</a></h2>
-            <p class="uk-article-meta">发表于{{ blog.create_at}}</p>
+            <p class="uk-article-meta">published at{{ blog.create_at}}</p>
             <p>{{ blog.summary }}</p>
-            <p><a href="/blog/{{ blog.id }}">继续阅读 <i class="uk-icon-angle-double-right"></i></a></p>
+            <p><a href="/blog/{{ blog.id }}">continue reading <i class="uk-icon-angle-double-right"></i></a></p>
         </article>
         <hr class="uk-article-divider">
     {% endfor %}

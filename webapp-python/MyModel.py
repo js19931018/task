@@ -8,7 +8,7 @@ from transwarp_orm import Model, StringField, BooleanField, FloatField, TextFiel
 class User(Model):
     __table__ = 'User'
 
-    id = StringField('id',default=next_id)
+    id = StringField('id',default=next_id())
     email = StringField('email',upable=False )
     password = StringField('password')
     admin = BooleanField('admin')
@@ -19,7 +19,7 @@ class User(Model):
 class Blog(Model):
     __table__ = 'Blog'
 
-    id = StringField( 'id',primary_key=True, default=next_id)
+    id = StringField( 'id',primary_key=True, default=next_id())
     user_id = StringField('user_id',upable=False)
     user_name = StringField('use_name')
     user_image = StringField('user_image')
@@ -31,7 +31,7 @@ class Blog(Model):
 class Comment(Model):
     __table__ = 'Comment'
 
-    id = StringField( 'id',default=next_id)
+    id = StringField( 'id',default=next_id())
     blog_id = StringField('blog_id')
     user_id = StringField('user_id')
     user_name = StringField('username')

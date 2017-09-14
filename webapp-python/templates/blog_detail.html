@@ -5,16 +5,56 @@
 {% block content %}
 
     <div class="uk-width-medium-3-4">
-    {% for blog in blogs %}
+    {% if blog  %}
         <article class="uk-article">
             <h2><a href="/blog/{{ blog.id }}">{{ blog.name }}</a></h2>
             <p class="uk-article-meta">published at{{ blog.create_at}}</p>
+            <p>{{ blog.id }}</p>
             <p>{{ blog.summary }}</p>
-            <p><a href="/blog/{{ blog.id }}"><i class="uk-icon-angle-double-right"></i></a></p>
+            <p>{{ blog.content }}</p>
         </article>
         <hr class="uk-article-divider">
+    {% else %}
+    {% endif %}
+    </div>
+
+    <div class="uk-width-medium-2-4">
+    {% for comment in comments %}
+        <article class="uk-article">
+            <h2><a href="/comment/{{ comment.id }}">{{ comment.username }}</a></h2>
+            <p class="uk-article-meta">published at{{ comment.create_at}}</p>
+            <p>{{ comment.content }}</p>
+        </article>
+        <hr class="uk-article-divider">
+    
     {% endfor %}
     </div>
+
+<div class="uk-width-2-3">
+    <h1>write your comments</h1>
+    <form action="/comment_submit" method="post" id="post_comment" class="uk-form uk-form-stacked" >
+        <div class="uk-alert uk-alert-danger uk-hidden"></div>
+        <div class="uk-form-row">
+            <label class="uk-form-label">comment:</label>
+            <div class="uk-form-controls">
+                    <input name="comment" type="text" class="uk-width-1-1">
+            </div>
+            <label class="uk-form-label">blog id:</label>
+            <div class="uk-form-controls">
+                    <input name="blog_id" type="text" class="uk-width-1-1">
+            </div>
+        </div>
+        
+            <button type="submit" class="uk-button uk-button-primary"><i class="uk-icon-user"></i> submit</button>
+        </div>
+    </form>
+</div>
+
+   
+
+   
+
+
 
     <div class="uk-width-medium-1-4">
         <div class="uk-panel uk-panel-header">

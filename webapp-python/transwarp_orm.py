@@ -103,15 +103,24 @@ class Model(dict):
 
         sql = "select * from %s where %s='%s'" % (self.__table__,kid,key)
         s=db.select(sql)
-        print('SQL: %s' % sql)  # Attribute __table__ is from Modelmetaclass
-                        #s is a list containing only one return from db.select
-        return s[0]
+        print 'selelct sql: %s' % sql # Attribute __table__ is from Modelmetaclass
+        print 'select result: %s'%str(s)
+        if s:                #s is a list containing only one return from db.select
+            return s[0]
+        else:
+            return s
+
+    def select_some(self,kid,key):
+        sql = "select * from %s where %s='%s'" % (self.__table__, kid, key)
+        s = db.select(sql)
+        print 'selelct sql: %s' %sql  # Attribute __table__ is from Modelmetaclass
+        print 'select result: %s' %str(s)
+        return s
 
 
 
     def update_one(self,kid,key,cid,change):
         for k, v in self.__mappings__.iteritems():
-
             if cid==v.name:
                 if v.upable==False:
                     print ('cannot update this')
