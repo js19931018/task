@@ -1,0 +1,26 @@
+$def with (message,room,time,day)
+<html>
+   <head>
+      <title>Holly Grail</title>
+   </head>
+<body>
+
+$if message:
+   room:<em>$room<em>
+   day:<em>$day<em>
+   time:<em>$time<em>
+   hint:<em style=" font-size:2em;">$message</em>.
+$else:
+   hint:<em style="color: green; font-size:2em;">No</em>, message
+
+<h1>What do next</h1>
+
+<form action="/game" method="POST">
+    Action: <input type="text" name="action">
+    <br/>
+    <input type="submit">
+</form>
+
+
+</body>
+</html>

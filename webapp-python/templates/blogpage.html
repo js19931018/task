@@ -1,0 +1,20 @@
+{% extends '__base__.html' %}
+
+{% block content %}
+
+<div class="uk-width-2-3">
+    <h1>page number</h1>
+    <form action="/blogs_by_page" method="post" id="api_get_blogs_bypage" class="uk-form uk-form-stacked" >
+        <div class="uk-alert uk-alert-danger uk-hidden"></div>
+        <div class="uk-form-row">
+            <label class="uk-form-label">page:</label>
+            <div class="uk-form-controls">
+                <input name="page" type="text" class="uk-width-1-1">
+            </div>
+        </div>
+        
+            <button type="submit" class="uk-button uk-button-primary"><i class="uk-icon-user"></i> submit</button>
+        </div>
+    </form>
+</div>
+{% endblock %}
