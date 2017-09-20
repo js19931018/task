@@ -1,0 +1,9 @@
+ python manage.py shell
+ f=open('name_path.json')
+ from fileanalysis.models import Path_and_name
+ import json
+ readfile=json.load(f)
+ for i in readfile:
+    q = Path_and_name(name=i['name'],path=i['path'])
+    q.save()
+

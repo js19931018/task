@@ -1,0 +1,874 @@
+[
+  {
+    "path": "/", 
+    "name": "/m.main"
+  }, 
+  {
+    "path": "/accounting", 
+    "name": "/m.main/accounting"
+  }, 
+  {
+    "path": "/attendance", 
+    "name": "/m.main/attendance"
+  }, 
+  {
+    "path": "/dashboard", 
+    "name": "/m.main/dashboard"
+  }, 
+  {
+    "path": "/employee", 
+    "name": "/m.main/employee"
+  }, 
+  {
+    "path": "/employee/roster", 
+    "name": "/m.main/employee/employeeRoster"
+  }, 
+  {
+    "path": "/employee/roster/list", 
+    "name": "/m.main/employee/employeeRoster/employeeList"
+  }, 
+  {
+    "path": "/employee/roster/advanced-search", 
+    "name": "/m.main/employee/employeeRoster/employeeAdvancedSearch"
+  }, 
+  {
+    "path": "/employee/roster/batch-delete", 
+    "name": "/m.main/employee/employeeRoster/employeeBatchDelete"
+  }, 
+  {
+    "path": "/employee/roster/recovery", 
+    "name": "/m.main/employee/employeeRoster/employeeRecovery"
+  }, 
+  {
+    "path": "/employee/roster/abnormal-data", 
+    "name": "/m.main/employee/employeeRoster/employeeAbnormalData"
+  }, 
+  {
+    "path": "/employee/roster/batch-maintenance", 
+    "name": "/m.main/employee/employeeRoster/employeeBatchMaintenance"
+  }, 
+  {
+    "path": "/employee/roster/custom-export", 
+    "name": "/m.main/employee/employeeRoster/employeeCustomExport"
+  }, 
+  {
+    "path": "/employee/roster/select-group", 
+    "name": "/m.main/employee/employeeRoster/employeeSelectGroup"
+  }, 
+  {
+    "path": "/employee/roster/select-field", 
+    "name": "/m.main/employee/employeeRoster/employeeSelectField"
+  }, 
+  {
+    "path": "/employee/roster/matching-field", 
+    "name": "/m.main/employee/employeeRoster/employeeMatchingField"
+  }, 
+  {
+    "path": "/employee/roster/update-info", 
+    "name": "/m.main/employee/employeeRoster/updataEmployeeInfo"
+  }, 
+  {
+    "path": "/employee/relations", 
+    "name": "/m.main/employee/employeeRelations"
+  }, 
+  {
+    "path": "/employee/relations/enrollment", 
+    "name": "/m.main/employee/employeeRelations/enrollmentManage"
+  }, 
+  {
+    "path": "/employee/relations/enrollment/home", 
+    "name": "/m.main/employee/employeeRelations/enrollmentManage/enrollmentHome"
+  }, 
+  {
+    "path": "/employee/relations/enrollment/probation-list", 
+    "name": "/m.main/employee/employeeRelations/enrollmentManage/probationList"
+  }, 
+  {
+    "path": "/employee/relations/enrollment/pending-list", 
+    "name": "/m.main/employee/employeeRelations/enrollmentManage/pendingList"
+  }, 
+  {
+    "path": "/employee/relations/enrollment/abandon-list", 
+    "name": "/m.main/employee/employeeRelations/enrollmentManage/abandonList"
+  }, 
+  {
+    "path": "/employee/relations/departure", 
+    "name": "/m.main/employee/employeeRelations/departureManage"
+  }, 
+  {
+    "path": "/employee/relations/departure/home", 
+    "name": "/m.main/employee/employeeRelations/departureManage/departureHome"
+  }, 
+  {
+    "path": "/employee/relations/departure/leaving-list", 
+    "name": "/m.main/employee/employeeRelations/departureManage/leavingList"
+  }, 
+  {
+    "path": "/employee/relations/departure/leave-list", 
+    "name": "/m.main/employee/employeeRelations/departureManage/leaveList"
+  }, 
+  {
+    "path": "/employee/relations/contract", 
+    "name": "/m.main/employee/employeeRelations/contractManage"
+  }, 
+  {
+    "path": "/employee/relations/contract/home", 
+    "name": "/m.main/employee/employeeRelations/contractManage/contractHome"
+  }, 
+  {
+    "path": "/employee/relations/contract/not-signed", 
+    "name": "/m.main/employee/employeeRelations/contractManage/contractNotSigned"
+  }, 
+  {
+    "path": "/employee/relations/contract/expire", 
+    "name": "/m.main/employee/employeeRelations/contractManage/contractExpire"
+  }, 
+  {
+    "path": "/employee/relations/care", 
+    "name": "/m.main/employee/employeeRelations/careManage"
+  }, 
+  {
+    "path": "/employee/relations/care/home", 
+    "name": "/m.main/employee/employeeRelations/careManage/careHome"
+  }, 
+  {
+    "path": "/employee/relations/care/birthday", 
+    "name": "/m.main/employee/employeeRelations/careManage/employeeBirthday"
+  }, 
+  {
+    "path": "/employee/relations/care/anniversary", 
+    "name": "/m.main/employee/employeeRelations/careManage/employeeAnniversary"
+  }, 
+  {
+    "path": "/employee/relations/care/batch-sms", 
+    "name": "/m.main/employee/employeeRelations/careManage/batchSms"
+  }, 
+  {
+    "path": "/employee/relations/care/send-records", 
+    "name": "/m.main/employee/employeeRelations/careManage/sendRecords"
+  }, 
+  {
+    "path": "/employee/relations/care/send-detail/:id", 
+    "name": "/m.main/employee/employeeRelations/careManage/sendDetail"
+  }, 
+  {
+    "path": "/employee/relations/care/custom-template", 
+    "name": "/m.main/employee/employeeRelations/careManage/customTemplate"
+  }, 
+  {
+    "path": "/employee/relations/care/sms-send", 
+    "name": "/m.main/employee/employeeRelations/careManage/smsSend"
+  }, 
+  {
+    "path": "/employee/relations/turnover", 
+    "name": "/m.main/employee/employeeRelations/turnoverManage"
+  }, 
+  {
+    "path": "/employee/relations/turnover/home", 
+    "name": "/m.main/employee/employeeRelations/turnoverManage/turnoverHome"
+  }, 
+  {
+    "path": "/employee/relations/add", 
+    "name": "/m.main/employee/employeeRelations/addEmployee"
+  }, 
+  {
+    "path": "/employee/relations/add/job", 
+    "name": "/m.main/employee/employeeRelations/addEmployee/addJob"
+  }, 
+  {
+    "path": "/employee/relations/add/pendin-entry", 
+    "name": "/m.main/employee/employeeRelations/addEmployee/pendinEntry"
+  }, 
+  {
+    "path": "/employee/relations/add/:employeeId/supplement", 
+    "name": "/m.main/employee/employeeRelations/addEmployee/supplementInfo"
+  }, 
+  {
+    "path": "/employee/relations/add/:employeeId/edit-info", 
+    "name": "/m.main/employee/employeeRelations/addEmployee/editEntryInfo"
+  }, 
+  {
+    "path": "/employee/relations/add/entry-code", 
+    "name": "/m.main/employee/employeeRelations/addEmployee/entryCode"
+  }, 
+  {
+    "path": "/employee/relations/add/:employeeId/invite", 
+    "name": "/m.main/employee/employeeRelations/addEmployee/entryInvitation"
+  }, 
+  {
+    "path": "/employee/relations/add/:sn/emp-join", 
+    "name": "/m.main/employee/employeeRelations/addEmployee/empJoin"
+  }, 
+  {
+    "path": "/employee/relations/processes", 
+    "name": "/m.main/employee/employeeRelations/employeeProcesses"
+  }, 
+  {
+    "path": "/employee/relations/processes/:employeeId/rejoin", 
+    "name": "/m.main/employee/employeeRelations/employeeProcesses/rejoinEntry"
+  }, 
+  {
+    "path": "/employee/relations/processes/:employeeId/confirm", 
+    "name": "/m.main/employee/employeeRelations/employeeProcesses/confirmEntry"
+  }, 
+  {
+    "path": "/employee/relations/processes/:employeeId/formal", 
+    "name": "/m.main/employee/employeeRelations/employeeProcesses/employeeFormal"
+  }, 
+  {
+    "path": "/employee/relations/processes/:employeeId/leave-confirm", 
+    "name": "/m.main/employee/employeeRelations/employeeProcesses/leavecConfirm"
+  }, 
+  {
+    "path": "/employee/relations/processes/:employeeId/leave-edit", 
+    "name": "/m.main/employee/employeeRelations/employeeProcesses/leaveEditInfo"
+  }, 
+  {
+    "path": "/employee/relations/processes/:employeeId/leave", 
+    "name": "/m.main/employee/employeeRelations/employeeProcesses/leaveApply"
+  }, 
+  {
+    "path": "/employee/relations/award", 
+    "name": "/m.main/employee/employeeRelations/awardManage"
+  }, 
+  {
+    "path": "/employee/relations/award/home", 
+    "name": "/m.main/employee/employeeRelations/awardManage/awardHome"
+  }, 
+  {
+    "path": "/employee/relations/officeholding", 
+    "name": "/m.main/employee/employeeRelations/officeholdingManage"
+  }, 
+  {
+    "path": "/employee/relations/officeholding/home", 
+    "name": "/m.main/employee/employeeRelations/officeholdingManage/officeholdingHome"
+  }, 
+  {
+    "path": "/employee/archive", 
+    "name": "/m.main/employee/archive"
+  }, 
+  {
+    "path": "/employee/archive/status", 
+    "name": "/m.main/employee/archive/archivingStatus"
+  }, 
+  {
+    "path": "/employee/archive/supplement", 
+    "name": "/m.main/employee/archive/archivingSupplement"
+  }, 
+  {
+    "path": "/employee/archive/education", 
+    "name": "/m.main/employee/archive/archivingEducation"
+  }, 
+  {
+    "path": "/employee/archive/title", 
+    "name": "/m.main/employee/archive/archivingTitle"
+  }, 
+  {
+    "path": "/employee/archive/skill", 
+    "name": "/m.main/employee/archive/archivingSkill"
+  }, 
+  {
+    "path": "/employee/service", 
+    "name": "/m.main/employee/employeeService"
+  }, 
+  {
+    "path": "/employee/org", 
+    "name": "/m.main/employee/employeeOrganizational"
+  }, 
+  {
+    "path": "/employee/org/image", 
+    "name": "/m.main/employee/employeeOrganizational/employeeOrgHome"
+  }, 
+  {
+    "path": "/employee/org/image", 
+    "name": "/m.main/employee/employeeOrganizational/employeeOrgHome/employeeOrgImage"
+  }, 
+  {
+    "path": "/employee/org/image/management", 
+    "name": "/m.main/employee/employeeOrganizational/employeeOrgHome/employeeOrgManagement"
+  }, 
+  {
+    "path": "/employee/org/manage", 
+    "name": "/m.main/employee/employeeOrganizational/employeeOrgManageHome"
+  }, 
+  {
+    "path": "/employee/org/manage", 
+    "name": "/m.main/employee/employeeOrganizational/employeeOrgManageHome/employeeOrgManage"
+  }, 
+  {
+    "path": "/employee/org/manage/:id/sort", 
+    "name": "/m.main/employee/employeeOrganizational/employeeOrgManageHome/employeeOrgSort"
+  }, 
+  {
+    "path": "/employee/org/manage/:id/employee", 
+    "name": "/m.main/employee/employeeOrganizational/employeeOrgManageHome/employeeOrgEmployee"
+  }, 
+  {
+    "path": "/employee/org/job", 
+    "name": "/m.main/employee/employeeOrganizational/employeeOrgJob"
+  }, 
+  {
+    "path": "/employee/statistics", 
+    "name": "/m.main/employee/employeeStatistics"
+  }, 
+  {
+    "path": "/employee/statistics/overview", 
+    "name": "/m.main/employee/employeeStatistics/employeeStatisticsOverview"
+  }, 
+  {
+    "path": "/employee/statistics/trend_analysis", 
+    "name": "/m.main/employee/employeeStatistics/employeeStatisticsTrendAnalysis"
+  }, 
+  {
+    "path": "/employee/statistics/annual_analysis", 
+    "name": "/m.main/employee/employeeStatistics/employeeStatisticsAnnualAnalysis"
+  }, 
+  {
+    "path": "/employee/statistics/hr_reports", 
+    "name": "/m.main/employee/employeeStatistics/hrReportForm"
+  }, 
+  {
+    "path": "/employee/dynamic", 
+    "name": "/m.main/employee/employeeDynamic"
+  }, 
+  {
+    "path": "/employee/setting", 
+    "name": "/m.main/employee/employeeSetting"
+  }, 
+  {
+    "path": "/employee/setting/home", 
+    "name": "/m.main/employee/employeeSetting/employeeSettingHome"
+  }, 
+  {
+    "path": "/employee/setting/empinfo-required", 
+    "name": "/m.main/employee/employeeSetting/empinfoRequired"
+  }, 
+  {
+    "path": "/employee/setting/contract-company", 
+    "name": "/m.main/employee/employeeSetting/settingContractCompany"
+  }, 
+  {
+    "path": "/employee/setting/work-place", 
+    "name": "/m.main/employee/employeeSetting/settingWorkplace"
+  }, 
+  {
+    "path": "/employee/setting/job-level", 
+    "name": "/m.main/employee/employeeSetting/settingJobLevel"
+  }, 
+  {
+    "path": "/employee/setting/employee-attributes", 
+    "name": "/m.main/employee/employeeSetting/employeeAttributes"
+  }, 
+  {
+    "path": "/employee/setting/privacy", 
+    "name": "/m.main/employee/employeeSetting/employeePrivacy"
+  }, 
+  {
+    "path": "/employee/setting/notifications", 
+    "name": "/m.main/employee/employeeSetting/employeeNotifications"
+  }, 
+  {
+    "path": "/employee/setting/print", 
+    "name": "/m.main/employee/employeeSetting/employeePrint"
+  }, 
+  {
+    "path": "/employee/tool", 
+    "name": "/m.main/employee/formTool"
+  }, 
+  {
+    "path": "/employee/tool/entry", 
+    "name": "/m.main/employee/formTool/toolEntry"
+  }, 
+  {
+    "path": "/employee/tool/formal", 
+    "name": "/m.main/employee/formTool/toolFormal"
+  }, 
+  {
+    "path": "/employee/tool/formal/view", 
+    "name": "/m.main/employee/formTool/toolFormal/toolFormalView"
+  }, 
+  {
+    "path": "/employee/tool/formal/issue", 
+    "name": "/m.main/employee/formTool/toolFormal/toolFormalIssue"
+  }, 
+  {
+    "path": "/employee/tool/formal/preview", 
+    "name": "/m.main/employee/formTool/toolFormal/toolFormalPreview"
+  }, 
+  {
+    "path": "/employee/tool/job", 
+    "name": "/m.main/employee/formTool/toolJob"
+  }, 
+  {
+    "path": "/employee/tool/job/view", 
+    "name": "/m.main/employee/formTool/toolJob/toolJobView"
+  }, 
+  {
+    "path": "/employee/tool/job/issue", 
+    "name": "/m.main/employee/formTool/toolJob/toolJobIssue"
+  }, 
+  {
+    "path": "/employee/tool/job/preview", 
+    "name": "/m.main/employee/formTool/toolJob/toolJobPreview"
+  }, 
+  {
+    "path": "/employee/tool/income", 
+    "name": "/m.main/employee/formTool/toolIncome"
+  }, 
+  {
+    "path": "/employee/tool/income/view", 
+    "name": "/m.main/employee/formTool/toolIncome/toolIncomeView"
+  }, 
+  {
+    "path": "/employee/tool/income/issue", 
+    "name": "/m.main/employee/formTool/toolIncome/toolIncomeIssue"
+  }, 
+  {
+    "path": "/employee/tool/income/preview", 
+    "name": "/m.main/employee/formTool/toolIncome/toolIncomePreview"
+  }, 
+  {
+    "path": "/employee/tool/leave", 
+    "name": "/m.main/employee/formTool/toolLeave"
+  }, 
+  {
+    "path": "/employee/tool/leave/view", 
+    "name": "/m.main/employee/formTool/toolLeave/toolLeaveView"
+  }, 
+  {
+    "path": "/employee/tool/leave/issue", 
+    "name": "/m.main/employee/formTool/toolLeave/toolLeaveIssue"
+  }, 
+  {
+    "path": "/employee/tool/leave/preview", 
+    "name": "/m.main/employee/formTool/toolLeave/toolLeavePreview"
+  }, 
+  {
+    "path": "/employee/tool/relieve", 
+    "name": "/m.main/employee/formTool/toolRelieve"
+  }, 
+  {
+    "path": "/employee/tool/relieve/view", 
+    "name": "/m.main/employee/formTool/toolRelieve/toolRelieveView"
+  }, 
+  {
+    "path": "/employee/tool/relieve/issue", 
+    "name": "/m.main/employee/formTool/toolRelieve/toolRelieveIssue"
+  }, 
+  {
+    "path": "/employee/tool/relieve/preview", 
+    "name": "/m.main/employee/formTool/toolRelieve/toolRelievePreview"
+  }, 
+  {
+    "path": "/employee/tool/end", 
+    "name": "/m.main/employee/formTool/toolEnd"
+  }, 
+  {
+    "path": "/employee/tool/end/view", 
+    "name": "/m.main/employee/formTool/toolEnd/toolEndView"
+  }, 
+  {
+    "path": "/employee/tool/end/issue", 
+    "name": "/m.main/employee/formTool/toolEnd/toolEndIssue"
+  }, 
+  {
+    "path": "/employee/tool/end/preview", 
+    "name": "/m.main/employee/formTool/toolEnd/toolEndPreview"
+  }, 
+  {
+    "path": "/employee/tool/asset", 
+    "name": "/m.main/employee/formTool/toolAsset"
+  }, 
+  {
+    "path": "/employee/tool/asset/view", 
+    "name": "/m.main/employee/formTool/toolAsset/toolAssetView"
+  }, 
+  {
+    "path": "/employee/tool/asset/issue", 
+    "name": "/m.main/employee/formTool/toolAsset/toolAssetIssue"
+  }, 
+  {
+    "path": "/employee/tool/asset/preview", 
+    "name": "/m.main/employee/formTool/toolAsset/toolAssetPreview"
+  }, 
+  {
+    "path": "/employee/risk", 
+    "name": "/m.main/employee/risk"
+  }, 
+  {
+    "path": "/employee/risk/employment", 
+    "name": "/m.main/employee/risk/risk.notice"
+  }, 
+  {
+    "path": "/employee/risk/list", 
+    "name": "/m.main/employee/risk/risk.list"
+  }, 
+  {
+    "path": "/employee/risk/consulting", 
+    "name": "/m.main/employee/risk/risk.consulting"
+  }, 
+  {
+    "path": "/employee/:employeeId/detail", 
+    "name": "/m.main/employee/employeeDetail"
+  }, 
+  {
+    "path": "/employee/:employeeId/detail/job-info", 
+    "name": "/m.main/employee/employeeDetail/employeeJobInfo"
+  }, 
+  {
+    "path": "/employee/:employeeId/detail/personal-info", 
+    "name": "/m.main/employee/employeeDetail/employeePersonalInfo"
+  }, 
+  {
+    "path": "/employee/:employeeId/detail/contact-info", 
+    "name": "/m.main/employee/employeeDetail/employeeContactInfo"
+  }, 
+  {
+    "path": "/employee/:employeeId/detail/capital-info", 
+    "name": "/m.main/employee/employeeDetail/employeeCapitalInfo"
+  }, 
+  {
+    "path": "/employee/:employeeId/detail/contract-info", 
+    "name": "/m.main/employee/employeeDetail/employeeContractInfo"
+  }, 
+  {
+    "path": "/employee/:employeeId/detail/attachment-info", 
+    "name": "/m.main/employee/employeeDetail/employeeAttachmentInfo"
+  }, 
+  {
+    "path": "/employee/:employeeId/detail/transaction-record", 
+    "name": "/m.main/employee/employeeDetail/employeeTransactionRecord"
+  }, 
+  {
+    "path": "/employee/:employeeId/detail/operatio-record", 
+    "name": "/m.main/employee/employeeDetail/employeeOperatioRecord"
+  }, 
+  {
+    "path": "/hrService", 
+    "name": "/m.main/hrService"
+  }, 
+  {
+    "path": "/salary", 
+    "name": "/m.main/salary"
+  }, 
+  {
+    "path": "/selfService", 
+    "name": "/m.main/selfService"
+  }, 
+  {
+    "path": "/socialsecurity", 
+    "name": "/m.main/socialsecurity"
+  }, 
+  {
+    "path": "/topic", 
+    "name": "/m.main/topic"
+  }, 
+  {
+    "path": "/ucenter", 
+    "name": "/m.main/ucenter"
+  }, 
+  {
+    "path": "/ucenter/account", 
+    "name": "/m.main/ucenter/ucenter.account"
+  }, 
+  {
+    "path": "/ucenter/account/my-account", 
+    "name": "/m.main/ucenter/ucenter.account/ucenter.account.my-account"
+  }, 
+  {
+    "path": "/ucenter/account/notify", 
+    "name": "/m.main/ucenter/ucenter.account/ucenter.account.notify"
+  }, 
+  {
+    "path": "/ucenter/account/security", 
+    "name": "/m.main/ucenter/ucenter.account/ucenter.account.security"
+  }, 
+  {
+    "path": "/ucenter/corp", 
+    "name": "/m.main/ucenter/ucenter.corp"
+  }, 
+  {
+    "path": "/ucenter/corp/info", 
+    "name": "/m.main/ucenter/ucenter.corp/ucenter.corp.info"
+  }, 
+  {
+    "path": "/ucenter/corp/profile", 
+    "name": "/m.main/ucenter/ucenter.corp/ucenter.corp.profile"
+  }, 
+  {
+    "path": "/ucenter/corp/upgrade", 
+    "name": "/m.main/ucenter/ucenter.corp/ucenter.corp.upgrade"
+  }, 
+  {
+    "path": "/ucenter/corp/certify", 
+    "name": "/m.main/ucenter/ucenter.corp/ucenter.corp.certify"
+  }, 
+  {
+    "path": "/ucenter/accounts", 
+    "name": "/m.main/ucenter/ucenter.accounts"
+  }, 
+  {
+    "path": "/ucenter/accounts/list", 
+    "name": "/m.main/ucenter/ucenter.accounts/ucenter.accounts.list"
+  }, 
+  {
+    "path": "/ucenter/accounts/activity", 
+    "name": "/m.main/ucenter/ucenter.accounts/ucenter.accounts.activity"
+  }, 
+  {
+    "path": "/ucenter/accounts/add", 
+    "name": "/m.main/ucenter/ucenter.accounts/ucenter.accounts.add"
+  }, 
+  {
+    "path": "/ucenter/accounts/:id/setting", 
+    "name": "/m.main/ucenter/ucenter.accounts/ucenter.accounts.setting"
+  }, 
+  {
+    "path": "/ucenter/msg", 
+    "name": "/m.main/ucenter/ucenter.msg"
+  }, 
+  {
+    "path": "/ucenter/msg/notice", 
+    "name": "/m.main/ucenter/ucenter.msg/ucenter.msg.notice"
+  }, 
+  {
+    "path": "/ucenter/msg/bulletin", 
+    "name": "/m.main/ucenter/ucenter.msg/ucenter.msg.bulletin"
+  }, 
+  {
+    "path": "/ucenter/msg/bulletin/list", 
+    "name": "/m.main/ucenter/ucenter.msg/ucenter.msg.bulletin/ucenter.msg.bulletin.list"
+  }, 
+  {
+    "path": "/ucenter/msg/bulletin/detail/:id", 
+    "name": "/m.main/ucenter/ucenter.msg/ucenter.msg.bulletin/ucenter.msg.bulletin.detail"
+  }, 
+  {
+    "path": "/ucenter/mark", 
+    "name": "/m.main/ucenter/ucenter.mark"
+  }, 
+  {
+    "path": "/ucenter/mark/billing", 
+    "name": "/m.main/ucenter/ucenter.mark/ucenter.mark.billing"
+  }, 
+  {
+    "path": "/ucenter/mark/order", 
+    "name": "/m.main/ucenter/ucenter.mark/ucenter.mark.order"
+  }, 
+  {
+    "path": "/ucenter/mark/invoice", 
+    "name": "/m.main/ucenter/ucenter.mark/ucenter.mark.invoice"
+  }, 
+  {
+    "path": "/ucenter/mark/invoice/list", 
+    "name": "/m.main/ucenter/ucenter.mark/ucenter.mark.invoice/ucenter.mark.invoice.list"
+  }, 
+  {
+    "path": "/ucenter/mark/invoice/:id/info", 
+    "name": "/m.main/ucenter/ucenter.mark/ucenter.mark.invoice/ucenter.mark.invoice.info"
+  }, 
+  {
+    "path": "/ucenter/mark/invoice/create", 
+    "name": "/m.main/ucenter/ucenter.mark/ucenter.mark.invoice/ucenter.mark.invoice.create"
+  }, 
+  {
+    "path": "/welfare", 
+    "name": "/m.main/welfare"
+  }, 
+  {
+    "path": "/workbench", 
+    "name": "/m.main/workbench"
+  }, 
+  {
+    "path": "/workbench/desk", 
+    "name": "/m.main/workbench/desk"
+  }, 
+  {
+    "path": "/workbench/desk/home", 
+    "name": "/m.main/workbench/desk/deskHome"
+  }, 
+  {
+    "path": "/workbench/desk/calendar", 
+    "name": "/m.main/workbench/desk/bigCalendar"
+  }, 
+  {
+    "path": "/workbench/desk/delay", 
+    "name": "/m.main/workbench/desk/delayEvent"
+  }, 
+  {
+    "path": "/workbench/laws", 
+    "name": "/m.main/workbench/laws"
+  }, 
+  {
+    "path": "/workbench/laws/search", 
+    "name": "/m.main/workbench/laws/lawsSearch"
+  }, 
+  {
+    "path": "/workbench/laws/list", 
+    "name": "/m.main/workbench/laws/lawsList"
+  }, 
+  {
+    "path": "/404", 
+    "name": "/404"
+  }, 
+  {
+    "path": "/*", 
+    "name": "/notFound"
+  }, 
+  {
+    "path": "/hrloo/fastlogin", 
+    "name": "/fastlogin"
+  }, 
+  {
+    "path": "/signIn", 
+    "name": "/signIn"
+  }, 
+  {
+    "path": "/batch-add-contract", 
+    "name": "/batchAddContract"
+  }, 
+  {
+    "path": "/batch-add-mobile", 
+    "name": "/batchAddMobile"
+  }, 
+  {
+    "path": "/batch-add-pend", 
+    "name": "/batchAddPend"
+  }, 
+  {
+    "path": "/batch-edit", 
+    "name": "/batchEdit"
+  }, 
+  {
+    "path": "/batch-import", 
+    "name": "/batchImport"
+  }, 
+  {
+    "path": "/batch-import-contract", 
+    "name": "/batchImportContract"
+  }, 
+  {
+    "path": "/batch-renew-contract", 
+    "name": "/batchRenewContract"
+  }, 
+  {
+    "path": "/batch-supplement", 
+    "name": "/batchSupplement"
+  }, 
+  {
+    "path": "/website", 
+    "name": "/website"
+  }, 
+  {
+    "path": "/website/home", 
+    "name": "/website/website.home"
+  }, 
+  {
+    "path": "/website/agreement", 
+    "name": "/website/website.agreement"
+  }, 
+  {
+    "path": "/website/version", 
+    "name": "/website/website.version"
+  }, 
+  {
+    "path": "/website/product", 
+    "name": "/website/website.product"
+  }, 
+  {
+    "path": "/website/productService", 
+    "name": "/website/website.productService"
+  }, 
+  {
+    "path": "/website/voice", 
+    "name": "/website/website.voice"
+  }, 
+  {
+    "path": "/website/about", 
+    "name": "/website/website.about"
+  }, 
+  {
+    "path": "/website/clients", 
+    "name": "/website/website.clients"
+  }, 
+  {
+    "path": "/website/security", 
+    "name": "/website/website.security"
+  }, 
+  {
+    "path": "/test", 
+    "name": "/test"
+  }, 
+  {
+    "path": "/test/selectEmployee", 
+    "name": "/test/selectEmployee"
+  }, 
+  {
+    "path": "/test/area", 
+    "name": "/test/area"
+  }, 
+  {
+    "path": "/test/echarts", 
+    "name": "/test/echarts"
+  }, 
+  {
+    "path": "/test/form-tip", 
+    "name": "/test/formTip"
+  }, 
+  {
+    "path": "/test/signIn", 
+    "name": "/test/test.signIn"
+  }, 
+  {
+    "path": "/test/qrcode", 
+    "name": "/test/test.qrcode"
+  }, 
+  {
+    "path": "/test/cropperUpload", 
+    "name": "/test/test.cropperUpload"
+  }, 
+  {
+    "path": "/test/employeeRisk", 
+    "name": "/test/test.employeeRisk"
+  }, 
+  {
+    "path": "/test/vote", 
+    "name": "/test/test.vote"
+  }, 
+  {
+    "path": "/test/feedback", 
+    "name": "/test/test.feedback"
+  }, 
+  {
+    "path": "/test/spreedSheet", 
+    "name": "/test/test.spreedSheet"
+  }, 
+  {
+    "path": "/test/spreedSheetNew", 
+    "name": "/test/test.spreedSheetNew"
+  }, 
+  {
+    "path": "/test/form", 
+    "name": "/test/test.form"
+  }, 
+  {
+    "path": "/test/checkbox-button-group", 
+    "name": "/test/test.checkboxButtonGroup"
+  }, 
+  {
+    "path": "/test/search-filter", 
+    "name": "/test/test.searchFilter"
+  }, 
+  {
+    "path": "/test/caption", 
+    "name": "/test/test.caption"
+  }, 
+  {
+    "path": "/test/employeeRiskModal", 
+    "name": "/test/test.employeeRiskModal"
+  }, 
+  {
+    "path": "/test/preview", 
+    "name": "/test/test.preview"
+  }
+]
