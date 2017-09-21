@@ -2,7 +2,7 @@ import json
 import re
 
 
-f=open('route.json')
+f=open('/home/jsw/taskone/fileanalysis/route.json')
 readfile=json.load(f)
 print  readfile
 path_list=[]
@@ -16,7 +16,7 @@ class PathNode(object):
         if  self.singlepath=='/':
             self.singlepath=''
             self.path=self.forthpath + self.singlepath
-        elif  re.match(r'^/\s{0,50}',self.singlepath):
+        elif  self.singlepath[0]=='/':
             self.path = self.forthpath  + self.singlepath
         else:
             self.path = self.forthpath + '/' + self.singlepath
@@ -48,10 +48,14 @@ def traverse_list():
     for items in readfile:
         i=PathNode(items,'','')
         i.traverse()
+    addroot()
     fl=open('name_path.json','w')
     fl.write(json.dumps(path_list, ensure_ascii=False, indent=2))
     fl.close()
+    return path_list
 
+def addroot():
+    path_list[0]['path']='/'
 
 
 
