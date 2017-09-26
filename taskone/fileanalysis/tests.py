@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 from django.conf import settings
 from django.test import TestCase
-
+import search
 from analyze import traverse_list
 
 
@@ -29,6 +29,13 @@ class Testpath(TestCase):
                     pass
         self.assertEqual(list_false_path, [])
         self.assertEqual(list_empty_path, [])
+
+
+class  Testsearch(TestCase):
+    def testjson(self):
+        search.search('/home/jsw/taskone/fileanalysis/name_path.json', 'employee')
+
+
 '''
 class Testnumber(TestCase):
     def testnumber(self):
