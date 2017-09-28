@@ -13,12 +13,10 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "taskone.settings")
 django.setup()
 
 
-from fileanalysis.models import Path_and_name, Path_name_file
-from django.http import HttpResponse
+from fileanalysis.models import Path_and_name
 import json
 import logging
 
-from django.shortcuts import render
 
 
 def searchsql(keylist):
@@ -28,7 +26,7 @@ def searchsql(keylist):
         pkeyword = '/'+i
         lk.append(pkeyword)
 
-    p = Path_name_file.objects.filter(name__icontains=lk[0])
+    p = Path_and_name.objects.filter(name__icontains=lk[0])
     lk.pop(0)
     for i in lk:
         print i
@@ -37,7 +35,7 @@ def searchsql(keylist):
 
 
     for item in p:
-        l.append({'name': item.name, 'path': item.path ,'endcheck':item.endcheck})
+        l.append({'name': item.name, 'path': item.path})
 
 
     return l
@@ -68,26 +66,27 @@ def searchjson(path, keylist):
 
     return l
 
-def search(path, list_s):
+def search(path, *args):
     if path == 'sql':
-        r = searchsql(list_s)
+        r = searchsql(args)
         logging.info('Search in sql:%s' % r)
         print r
         return r
 
     else:
-        r = searchjson(path, list_s)
+        r = searchjson(path, args)
         logging.info('Search in sql:%s' % r)
         print r
         return r
 
-def searchrequest(request, pathkey):
-    l = pathkey.split('--')
-    path = l.pop(0)
-    s = search(path, l)
-    return HttpResponse(s)
 
 
+
+
+
+
+if __name__ == '__main__':
+    search('/home/jsw/taskone/fileanalysis/name_path.json', 'employee', 'employeeRelations')
 
 
 

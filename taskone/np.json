@@ -1,0 +1,1746 @@
+[
+  {
+    "path": "/", 
+    "name": "/m.main", 
+    "endcheck": [
+      "m.main", 
+      ""
+    ]
+  }, 
+  {
+    "path": "/accounting", 
+    "name": "/m.main/accounting", 
+    "endcheck": [
+      "accounting", 
+      "/accounting"
+    ]
+  }, 
+  {
+    "path": "/attendance", 
+    "name": "/m.main/attendance", 
+    "endcheck": [
+      "attendance", 
+      "/attendance"
+    ]
+  }, 
+  {
+    "path": "/dashboard", 
+    "name": "/m.main/dashboard", 
+    "endcheck": [
+      "dashboard", 
+      "/dashboard"
+    ]
+  }, 
+  {
+    "path": "/employee", 
+    "name": "/m.main/employee", 
+    "endcheck": [
+      "employee", 
+      "/employee"
+    ]
+  }, 
+  {
+    "path": "/employee/roster", 
+    "name": "/m.main/employee/employeeRoster", 
+    "endcheck": [
+      "employeeRoster", 
+      "roster"
+    ]
+  }, 
+  {
+    "path": "/employee/roster/list", 
+    "name": "/m.main/employee/employeeRoster/employeeList", 
+    "endcheck": [
+      "employeeList", 
+      "list"
+    ]
+  }, 
+  {
+    "path": "/employee/roster/advanced-search", 
+    "name": "/m.main/employee/employeeRoster/employeeAdvancedSearch", 
+    "endcheck": [
+      "employeeAdvancedSearch", 
+      "advanced-search"
+    ]
+  }, 
+  {
+    "path": "/employee/roster/batch-delete", 
+    "name": "/m.main/employee/employeeRoster/employeeBatchDelete", 
+    "endcheck": [
+      "employeeBatchDelete", 
+      "batch-delete"
+    ]
+  }, 
+  {
+    "path": "/employee/roster/recovery", 
+    "name": "/m.main/employee/employeeRoster/employeeRecovery", 
+    "endcheck": [
+      "employeeRecovery", 
+      "recovery"
+    ]
+  }, 
+  {
+    "path": "/employee/roster/abnormal-data", 
+    "name": "/m.main/employee/employeeRoster/employeeAbnormalData", 
+    "endcheck": [
+      "employeeAbnormalData", 
+      "abnormal-data"
+    ]
+  }, 
+  {
+    "path": "/employee/roster/batch-maintenance", 
+    "name": "/m.main/employee/employeeRoster/employeeBatchMaintenance", 
+    "endcheck": [
+      "employeeBatchMaintenance", 
+      "batch-maintenance"
+    ]
+  }, 
+  {
+    "path": "/employee/roster/custom-export", 
+    "name": "/m.main/employee/employeeRoster/employeeCustomExport", 
+    "endcheck": [
+      "employeeCustomExport", 
+      "custom-export"
+    ]
+  }, 
+  {
+    "path": "/employee/roster/select-group", 
+    "name": "/m.main/employee/employeeRoster/employeeSelectGroup", 
+    "endcheck": [
+      "employeeSelectGroup", 
+      "select-group"
+    ]
+  }, 
+  {
+    "path": "/employee/roster/select-field", 
+    "name": "/m.main/employee/employeeRoster/employeeSelectField", 
+    "endcheck": [
+      "employeeSelectField", 
+      "select-field"
+    ]
+  }, 
+  {
+    "path": "/employee/roster/matching-field", 
+    "name": "/m.main/employee/employeeRoster/employeeMatchingField", 
+    "endcheck": [
+      "employeeMatchingField", 
+      "matching-field"
+    ]
+  }, 
+  {
+    "path": "/employee/roster/update-info", 
+    "name": "/m.main/employee/employeeRoster/updataEmployeeInfo", 
+    "endcheck": [
+      "updataEmployeeInfo", 
+      "update-info"
+    ]
+  }, 
+  {
+    "path": "/employee/relations", 
+    "name": "/m.main/employee/employeeRelations", 
+    "endcheck": [
+      "employeeRelations", 
+      "relations"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/enrollment", 
+    "name": "/m.main/employee/employeeRelations/enrollmentManage", 
+    "endcheck": [
+      "enrollmentManage", 
+      "enrollment"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/enrollment/home", 
+    "name": "/m.main/employee/employeeRelations/enrollmentManage/enrollmentHome", 
+    "endcheck": [
+      "enrollmentHome", 
+      "home"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/enrollment/probation-list", 
+    "name": "/m.main/employee/employeeRelations/enrollmentManage/probationList", 
+    "endcheck": [
+      "probationList", 
+      "probation-list"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/enrollment/pending-list", 
+    "name": "/m.main/employee/employeeRelations/enrollmentManage/pendingList", 
+    "endcheck": [
+      "pendingList", 
+      "pending-list"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/enrollment/abandon-list", 
+    "name": "/m.main/employee/employeeRelations/enrollmentManage/abandonList", 
+    "endcheck": [
+      "abandonList", 
+      "abandon-list"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/departure", 
+    "name": "/m.main/employee/employeeRelations/departureManage", 
+    "endcheck": [
+      "departureManage", 
+      "departure"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/departure/home", 
+    "name": "/m.main/employee/employeeRelations/departureManage/departureHome", 
+    "endcheck": [
+      "departureHome", 
+      "home"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/departure/leaving-list", 
+    "name": "/m.main/employee/employeeRelations/departureManage/leavingList", 
+    "endcheck": [
+      "leavingList", 
+      "leaving-list"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/departure/leave-list", 
+    "name": "/m.main/employee/employeeRelations/departureManage/leaveList", 
+    "endcheck": [
+      "leaveList", 
+      "leave-list"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/contract", 
+    "name": "/m.main/employee/employeeRelations/contractManage", 
+    "endcheck": [
+      "contractManage", 
+      "contract"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/contract/home", 
+    "name": "/m.main/employee/employeeRelations/contractManage/contractHome", 
+    "endcheck": [
+      "contractHome", 
+      "home"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/contract/not-signed", 
+    "name": "/m.main/employee/employeeRelations/contractManage/contractNotSigned", 
+    "endcheck": [
+      "contractNotSigned", 
+      "not-signed"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/contract/expire", 
+    "name": "/m.main/employee/employeeRelations/contractManage/contractExpire", 
+    "endcheck": [
+      "contractExpire", 
+      "expire"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/care", 
+    "name": "/m.main/employee/employeeRelations/careManage", 
+    "endcheck": [
+      "careManage", 
+      "care"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/care/home", 
+    "name": "/m.main/employee/employeeRelations/careManage/careHome", 
+    "endcheck": [
+      "careHome", 
+      "home"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/care/birthday", 
+    "name": "/m.main/employee/employeeRelations/careManage/employeeBirthday", 
+    "endcheck": [
+      "employeeBirthday", 
+      "birthday"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/care/anniversary", 
+    "name": "/m.main/employee/employeeRelations/careManage/employeeAnniversary", 
+    "endcheck": [
+      "employeeAnniversary", 
+      "anniversary"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/care/batch-sms", 
+    "name": "/m.main/employee/employeeRelations/careManage/batchSms", 
+    "endcheck": [
+      "batchSms", 
+      "batch-sms"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/care/send-records", 
+    "name": "/m.main/employee/employeeRelations/careManage/sendRecords", 
+    "endcheck": [
+      "sendRecords", 
+      "send-records"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/care/send-detail/:id", 
+    "name": "/m.main/employee/employeeRelations/careManage/sendDetail", 
+    "endcheck": [
+      "sendDetail", 
+      "send-detail/:id"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/care/custom-template", 
+    "name": "/m.main/employee/employeeRelations/careManage/customTemplate", 
+    "endcheck": [
+      "customTemplate", 
+      "custom-template"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/care/sms-send", 
+    "name": "/m.main/employee/employeeRelations/careManage/smsSend", 
+    "endcheck": [
+      "smsSend", 
+      "sms-send"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/turnover", 
+    "name": "/m.main/employee/employeeRelations/turnoverManage", 
+    "endcheck": [
+      "turnoverManage", 
+      "turnover"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/turnover/home", 
+    "name": "/m.main/employee/employeeRelations/turnoverManage/turnoverHome", 
+    "endcheck": [
+      "turnoverHome", 
+      "home"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/add", 
+    "name": "/m.main/employee/employeeRelations/addEmployee", 
+    "endcheck": [
+      "addEmployee", 
+      "add"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/add/job", 
+    "name": "/m.main/employee/employeeRelations/addEmployee/addJob", 
+    "endcheck": [
+      "addJob", 
+      "job"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/add/pendin-entry", 
+    "name": "/m.main/employee/employeeRelations/addEmployee/pendinEntry", 
+    "endcheck": [
+      "pendinEntry", 
+      "pendin-entry"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/add/:employeeId/supplement", 
+    "name": "/m.main/employee/employeeRelations/addEmployee/supplementInfo", 
+    "endcheck": [
+      "supplementInfo", 
+      ":employeeId/supplement"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/add/:employeeId/edit-info", 
+    "name": "/m.main/employee/employeeRelations/addEmployee/editEntryInfo", 
+    "endcheck": [
+      "editEntryInfo", 
+      ":employeeId/edit-info"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/add/entry-code", 
+    "name": "/m.main/employee/employeeRelations/addEmployee/entryCode", 
+    "endcheck": [
+      "entryCode", 
+      "entry-code"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/add/:employeeId/invite", 
+    "name": "/m.main/employee/employeeRelations/addEmployee/entryInvitation", 
+    "endcheck": [
+      "entryInvitation", 
+      ":employeeId/invite"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/add/:sn/emp-join", 
+    "name": "/m.main/employee/employeeRelations/addEmployee/empJoin", 
+    "endcheck": [
+      "empJoin", 
+      ":sn/emp-join"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/processes", 
+    "name": "/m.main/employee/employeeRelations/employeeProcesses", 
+    "endcheck": [
+      "employeeProcesses", 
+      "processes"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/processes/:employeeId/rejoin", 
+    "name": "/m.main/employee/employeeRelations/employeeProcesses/rejoinEntry", 
+    "endcheck": [
+      "rejoinEntry", 
+      ":employeeId/rejoin"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/processes/:employeeId/confirm", 
+    "name": "/m.main/employee/employeeRelations/employeeProcesses/confirmEntry", 
+    "endcheck": [
+      "confirmEntry", 
+      ":employeeId/confirm"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/processes/:employeeId/formal", 
+    "name": "/m.main/employee/employeeRelations/employeeProcesses/employeeFormal", 
+    "endcheck": [
+      "employeeFormal", 
+      ":employeeId/formal"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/processes/:employeeId/leave-confirm", 
+    "name": "/m.main/employee/employeeRelations/employeeProcesses/leavecConfirm", 
+    "endcheck": [
+      "leavecConfirm", 
+      ":employeeId/leave-confirm"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/processes/:employeeId/leave-edit", 
+    "name": "/m.main/employee/employeeRelations/employeeProcesses/leaveEditInfo", 
+    "endcheck": [
+      "leaveEditInfo", 
+      ":employeeId/leave-edit"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/processes/:employeeId/leave", 
+    "name": "/m.main/employee/employeeRelations/employeeProcesses/leaveApply", 
+    "endcheck": [
+      "leaveApply", 
+      ":employeeId/leave"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/award", 
+    "name": "/m.main/employee/employeeRelations/awardManage", 
+    "endcheck": [
+      "awardManage", 
+      "award"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/award/home", 
+    "name": "/m.main/employee/employeeRelations/awardManage/awardHome", 
+    "endcheck": [
+      "awardHome", 
+      "home"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/officeholding", 
+    "name": "/m.main/employee/employeeRelations/officeholdingManage", 
+    "endcheck": [
+      "officeholdingManage", 
+      "officeholding"
+    ]
+  }, 
+  {
+    "path": "/employee/relations/officeholding/home", 
+    "name": "/m.main/employee/employeeRelations/officeholdingManage/officeholdingHome", 
+    "endcheck": [
+      "officeholdingHome", 
+      "home"
+    ]
+  }, 
+  {
+    "path": "/employee/archive", 
+    "name": "/m.main/employee/archive", 
+    "endcheck": [
+      "archive", 
+      "archive"
+    ]
+  }, 
+  {
+    "path": "/employee/archive/status", 
+    "name": "/m.main/employee/archive/archivingStatus", 
+    "endcheck": [
+      "archivingStatus", 
+      "status"
+    ]
+  }, 
+  {
+    "path": "/employee/archive/supplement", 
+    "name": "/m.main/employee/archive/archivingSupplement", 
+    "endcheck": [
+      "archivingSupplement", 
+      "supplement"
+    ]
+  }, 
+  {
+    "path": "/employee/archive/education", 
+    "name": "/m.main/employee/archive/archivingEducation", 
+    "endcheck": [
+      "archivingEducation", 
+      "education"
+    ]
+  }, 
+  {
+    "path": "/employee/archive/title", 
+    "name": "/m.main/employee/archive/archivingTitle", 
+    "endcheck": [
+      "archivingTitle", 
+      "title"
+    ]
+  }, 
+  {
+    "path": "/employee/archive/skill", 
+    "name": "/m.main/employee/archive/archivingSkill", 
+    "endcheck": [
+      "archivingSkill", 
+      "skill"
+    ]
+  }, 
+  {
+    "path": "/employee/service", 
+    "name": "/m.main/employee/employeeService", 
+    "endcheck": [
+      "employeeService", 
+      "service"
+    ]
+  }, 
+  {
+    "path": "/employee/org", 
+    "name": "/m.main/employee/employeeOrganizational", 
+    "endcheck": [
+      "employeeOrganizational", 
+      "org"
+    ]
+  }, 
+  {
+    "path": "/employee/org/image", 
+    "name": "/m.main/employee/employeeOrganizational/employeeOrgHome", 
+    "endcheck": [
+      "employeeOrgHome", 
+      "image"
+    ]
+  }, 
+  {
+    "path": "/employee/org/image", 
+    "name": "/m.main/employee/employeeOrganizational/employeeOrgHome/employeeOrgImage", 
+    "endcheck": [
+      "employeeOrgImage", 
+      ""
+    ]
+  }, 
+  {
+    "path": "/employee/org/image/management", 
+    "name": "/m.main/employee/employeeOrganizational/employeeOrgHome/employeeOrgManagement", 
+    "endcheck": [
+      "employeeOrgManagement", 
+      "management"
+    ]
+  }, 
+  {
+    "path": "/employee/org/manage", 
+    "name": "/m.main/employee/employeeOrganizational/employeeOrgManageHome", 
+    "endcheck": [
+      "employeeOrgManageHome", 
+      "manage"
+    ]
+  }, 
+  {
+    "path": "/employee/org/manage", 
+    "name": "/m.main/employee/employeeOrganizational/employeeOrgManageHome/employeeOrgManage", 
+    "endcheck": [
+      "employeeOrgManage", 
+      ""
+    ]
+  }, 
+  {
+    "path": "/employee/org/manage/:id/sort", 
+    "name": "/m.main/employee/employeeOrganizational/employeeOrgManageHome/employeeOrgSort", 
+    "endcheck": [
+      "employeeOrgSort", 
+      ":id/sort"
+    ]
+  }, 
+  {
+    "path": "/employee/org/manage/:id/employee", 
+    "name": "/m.main/employee/employeeOrganizational/employeeOrgManageHome/employeeOrgEmployee", 
+    "endcheck": [
+      "employeeOrgEmployee", 
+      ":id/employee"
+    ]
+  }, 
+  {
+    "path": "/employee/org/job", 
+    "name": "/m.main/employee/employeeOrganizational/employeeOrgJob", 
+    "endcheck": [
+      "employeeOrgJob", 
+      "job"
+    ]
+  }, 
+  {
+    "path": "/employee/statistics", 
+    "name": "/m.main/employee/employeeStatistics", 
+    "endcheck": [
+      "employeeStatistics", 
+      "statistics"
+    ]
+  }, 
+  {
+    "path": "/employee/statistics/overview", 
+    "name": "/m.main/employee/employeeStatistics/employeeStatisticsOverview", 
+    "endcheck": [
+      "employeeStatisticsOverview", 
+      "overview"
+    ]
+  }, 
+  {
+    "path": "/employee/statistics/trend_analysis", 
+    "name": "/m.main/employee/employeeStatistics/employeeStatisticsTrendAnalysis", 
+    "endcheck": [
+      "employeeStatisticsTrendAnalysis", 
+      "trend_analysis"
+    ]
+  }, 
+  {
+    "path": "/employee/statistics/annual_analysis", 
+    "name": "/m.main/employee/employeeStatistics/employeeStatisticsAnnualAnalysis", 
+    "endcheck": [
+      "employeeStatisticsAnnualAnalysis", 
+      "annual_analysis"
+    ]
+  }, 
+  {
+    "path": "/employee/statistics/hr_reports", 
+    "name": "/m.main/employee/employeeStatistics/hrReportForm", 
+    "endcheck": [
+      "hrReportForm", 
+      "hr_reports"
+    ]
+  }, 
+  {
+    "path": "/employee/dynamic", 
+    "name": "/m.main/employee/employeeDynamic", 
+    "endcheck": [
+      "employeeDynamic", 
+      "dynamic"
+    ]
+  }, 
+  {
+    "path": "/employee/setting", 
+    "name": "/m.main/employee/employeeSetting", 
+    "endcheck": [
+      "employeeSetting", 
+      "setting"
+    ]
+  }, 
+  {
+    "path": "/employee/setting/home", 
+    "name": "/m.main/employee/employeeSetting/employeeSettingHome", 
+    "endcheck": [
+      "employeeSettingHome", 
+      "home"
+    ]
+  }, 
+  {
+    "path": "/employee/setting/empinfo-required", 
+    "name": "/m.main/employee/employeeSetting/empinfoRequired", 
+    "endcheck": [
+      "empinfoRequired", 
+      "empinfo-required"
+    ]
+  }, 
+  {
+    "path": "/employee/setting/contract-company", 
+    "name": "/m.main/employee/employeeSetting/settingContractCompany", 
+    "endcheck": [
+      "settingContractCompany", 
+      "contract-company"
+    ]
+  }, 
+  {
+    "path": "/employee/setting/work-place", 
+    "name": "/m.main/employee/employeeSetting/settingWorkplace", 
+    "endcheck": [
+      "settingWorkplace", 
+      "work-place"
+    ]
+  }, 
+  {
+    "path": "/employee/setting/job-level", 
+    "name": "/m.main/employee/employeeSetting/settingJobLevel", 
+    "endcheck": [
+      "settingJobLevel", 
+      "job-level"
+    ]
+  }, 
+  {
+    "path": "/employee/setting/employee-attributes", 
+    "name": "/m.main/employee/employeeSetting/employeeAttributes", 
+    "endcheck": [
+      "employeeAttributes", 
+      "employee-attributes"
+    ]
+  }, 
+  {
+    "path": "/employee/setting/privacy", 
+    "name": "/m.main/employee/employeeSetting/employeePrivacy", 
+    "endcheck": [
+      "employeePrivacy", 
+      "privacy"
+    ]
+  }, 
+  {
+    "path": "/employee/setting/notifications", 
+    "name": "/m.main/employee/employeeSetting/employeeNotifications", 
+    "endcheck": [
+      "employeeNotifications", 
+      "notifications"
+    ]
+  }, 
+  {
+    "path": "/employee/setting/print", 
+    "name": "/m.main/employee/employeeSetting/employeePrint", 
+    "endcheck": [
+      "employeePrint", 
+      "print"
+    ]
+  }, 
+  {
+    "path": "/employee/tool", 
+    "name": "/m.main/employee/formTool", 
+    "endcheck": [
+      "formTool", 
+      "tool"
+    ]
+  }, 
+  {
+    "path": "/employee/tool/entry", 
+    "name": "/m.main/employee/formTool/toolEntry", 
+    "endcheck": [
+      "toolEntry", 
+      "entry"
+    ]
+  }, 
+  {
+    "path": "/employee/tool/formal", 
+    "name": "/m.main/employee/formTool/toolFormal", 
+    "endcheck": [
+      "toolFormal", 
+      "formal"
+    ]
+  }, 
+  {
+    "path": "/employee/tool/formal/view", 
+    "name": "/m.main/employee/formTool/toolFormal/toolFormalView", 
+    "endcheck": [
+      "toolFormalView", 
+      "view"
+    ]
+  }, 
+  {
+    "path": "/employee/tool/formal/issue", 
+    "name": "/m.main/employee/formTool/toolFormal/toolFormalIssue", 
+    "endcheck": [
+      "toolFormalIssue", 
+      "issue"
+    ]
+  }, 
+  {
+    "path": "/employee/tool/formal/preview", 
+    "name": "/m.main/employee/formTool/toolFormal/toolFormalPreview", 
+    "endcheck": [
+      "toolFormalPreview", 
+      "preview"
+    ]
+  }, 
+  {
+    "path": "/employee/tool/job", 
+    "name": "/m.main/employee/formTool/toolJob", 
+    "endcheck": [
+      "toolJob", 
+      "job"
+    ]
+  }, 
+  {
+    "path": "/employee/tool/job/view", 
+    "name": "/m.main/employee/formTool/toolJob/toolJobView", 
+    "endcheck": [
+      "toolJobView", 
+      "view"
+    ]
+  }, 
+  {
+    "path": "/employee/tool/job/issue", 
+    "name": "/m.main/employee/formTool/toolJob/toolJobIssue", 
+    "endcheck": [
+      "toolJobIssue", 
+      "issue"
+    ]
+  }, 
+  {
+    "path": "/employee/tool/job/preview", 
+    "name": "/m.main/employee/formTool/toolJob/toolJobPreview", 
+    "endcheck": [
+      "toolJobPreview", 
+      "preview"
+    ]
+  }, 
+  {
+    "path": "/employee/tool/income", 
+    "name": "/m.main/employee/formTool/toolIncome", 
+    "endcheck": [
+      "toolIncome", 
+      "income"
+    ]
+  }, 
+  {
+    "path": "/employee/tool/income/view", 
+    "name": "/m.main/employee/formTool/toolIncome/toolIncomeView", 
+    "endcheck": [
+      "toolIncomeView", 
+      "view"
+    ]
+  }, 
+  {
+    "path": "/employee/tool/income/issue", 
+    "name": "/m.main/employee/formTool/toolIncome/toolIncomeIssue", 
+    "endcheck": [
+      "toolIncomeIssue", 
+      "issue"
+    ]
+  }, 
+  {
+    "path": "/employee/tool/income/preview", 
+    "name": "/m.main/employee/formTool/toolIncome/toolIncomePreview", 
+    "endcheck": [
+      "toolIncomePreview", 
+      "preview"
+    ]
+  }, 
+  {
+    "path": "/employee/tool/leave", 
+    "name": "/m.main/employee/formTool/toolLeave", 
+    "endcheck": [
+      "toolLeave", 
+      "leave"
+    ]
+  }, 
+  {
+    "path": "/employee/tool/leave/view", 
+    "name": "/m.main/employee/formTool/toolLeave/toolLeaveView", 
+    "endcheck": [
+      "toolLeaveView", 
+      "view"
+    ]
+  }, 
+  {
+    "path": "/employee/tool/leave/issue", 
+    "name": "/m.main/employee/formTool/toolLeave/toolLeaveIssue", 
+    "endcheck": [
+      "toolLeaveIssue", 
+      "issue"
+    ]
+  }, 
+  {
+    "path": "/employee/tool/leave/preview", 
+    "name": "/m.main/employee/formTool/toolLeave/toolLeavePreview", 
+    "endcheck": [
+      "toolLeavePreview", 
+      "preview"
+    ]
+  }, 
+  {
+    "path": "/employee/tool/relieve", 
+    "name": "/m.main/employee/formTool/toolRelieve", 
+    "endcheck": [
+      "toolRelieve", 
+      "relieve"
+    ]
+  }, 
+  {
+    "path": "/employee/tool/relieve/view", 
+    "name": "/m.main/employee/formTool/toolRelieve/toolRelieveView", 
+    "endcheck": [
+      "toolRelieveView", 
+      "view"
+    ]
+  }, 
+  {
+    "path": "/employee/tool/relieve/issue", 
+    "name": "/m.main/employee/formTool/toolRelieve/toolRelieveIssue", 
+    "endcheck": [
+      "toolRelieveIssue", 
+      "issue"
+    ]
+  }, 
+  {
+    "path": "/employee/tool/relieve/preview", 
+    "name": "/m.main/employee/formTool/toolRelieve/toolRelievePreview", 
+    "endcheck": [
+      "toolRelievePreview", 
+      "preview"
+    ]
+  }, 
+  {
+    "path": "/employee/tool/end", 
+    "name": "/m.main/employee/formTool/toolEnd", 
+    "endcheck": [
+      "toolEnd", 
+      "end"
+    ]
+  }, 
+  {
+    "path": "/employee/tool/end/view", 
+    "name": "/m.main/employee/formTool/toolEnd/toolEndView", 
+    "endcheck": [
+      "toolEndView", 
+      "view"
+    ]
+  }, 
+  {
+    "path": "/employee/tool/end/issue", 
+    "name": "/m.main/employee/formTool/toolEnd/toolEndIssue", 
+    "endcheck": [
+      "toolEndIssue", 
+      "issue"
+    ]
+  }, 
+  {
+    "path": "/employee/tool/end/preview", 
+    "name": "/m.main/employee/formTool/toolEnd/toolEndPreview", 
+    "endcheck": [
+      "toolEndPreview", 
+      "preview"
+    ]
+  }, 
+  {
+    "path": "/employee/tool/asset", 
+    "name": "/m.main/employee/formTool/toolAsset", 
+    "endcheck": [
+      "toolAsset", 
+      "asset"
+    ]
+  }, 
+  {
+    "path": "/employee/tool/asset/view", 
+    "name": "/m.main/employee/formTool/toolAsset/toolAssetView", 
+    "endcheck": [
+      "toolAssetView", 
+      "view"
+    ]
+  }, 
+  {
+    "path": "/employee/tool/asset/issue", 
+    "name": "/m.main/employee/formTool/toolAsset/toolAssetIssue", 
+    "endcheck": [
+      "toolAssetIssue", 
+      "issue"
+    ]
+  }, 
+  {
+    "path": "/employee/tool/asset/preview", 
+    "name": "/m.main/employee/formTool/toolAsset/toolAssetPreview", 
+    "endcheck": [
+      "toolAssetPreview", 
+      "preview"
+    ]
+  }, 
+  {
+    "path": "/employee/risk", 
+    "name": "/m.main/employee/risk", 
+    "endcheck": [
+      "risk", 
+      "risk"
+    ]
+  }, 
+  {
+    "path": "/employee/risk/employment", 
+    "name": "/m.main/employee/risk/risk.notice", 
+    "endcheck": [
+      "risk.notice", 
+      "employment"
+    ]
+  }, 
+  {
+    "path": "/employee/risk/list", 
+    "name": "/m.main/employee/risk/risk.list", 
+    "endcheck": [
+      "risk.list", 
+      "list"
+    ]
+  }, 
+  {
+    "path": "/employee/risk/consulting", 
+    "name": "/m.main/employee/risk/risk.consulting", 
+    "endcheck": [
+      "risk.consulting", 
+      "consulting"
+    ]
+  }, 
+  {
+    "path": "/employee/:employeeId/detail", 
+    "name": "/m.main/employee/employeeDetail", 
+    "endcheck": [
+      "employeeDetail", 
+      ":employeeId/detail"
+    ]
+  }, 
+  {
+    "path": "/employee/:employeeId/detail/job-info", 
+    "name": "/m.main/employee/employeeDetail/employeeJobInfo", 
+    "endcheck": [
+      "employeeJobInfo", 
+      "job-info"
+    ]
+  }, 
+  {
+    "path": "/employee/:employeeId/detail/personal-info", 
+    "name": "/m.main/employee/employeeDetail/employeePersonalInfo", 
+    "endcheck": [
+      "employeePersonalInfo", 
+      "personal-info"
+    ]
+  }, 
+  {
+    "path": "/employee/:employeeId/detail/contact-info", 
+    "name": "/m.main/employee/employeeDetail/employeeContactInfo", 
+    "endcheck": [
+      "employeeContactInfo", 
+      "contact-info"
+    ]
+  }, 
+  {
+    "path": "/employee/:employeeId/detail/capital-info", 
+    "name": "/m.main/employee/employeeDetail/employeeCapitalInfo", 
+    "endcheck": [
+      "employeeCapitalInfo", 
+      "capital-info"
+    ]
+  }, 
+  {
+    "path": "/employee/:employeeId/detail/contract-info", 
+    "name": "/m.main/employee/employeeDetail/employeeContractInfo", 
+    "endcheck": [
+      "employeeContractInfo", 
+      "contract-info"
+    ]
+  }, 
+  {
+    "path": "/employee/:employeeId/detail/attachment-info", 
+    "name": "/m.main/employee/employeeDetail/employeeAttachmentInfo", 
+    "endcheck": [
+      "employeeAttachmentInfo", 
+      "attachment-info"
+    ]
+  }, 
+  {
+    "path": "/employee/:employeeId/detail/transaction-record", 
+    "name": "/m.main/employee/employeeDetail/employeeTransactionRecord", 
+    "endcheck": [
+      "employeeTransactionRecord", 
+      "transaction-record"
+    ]
+  }, 
+  {
+    "path": "/employee/:employeeId/detail/operatio-record", 
+    "name": "/m.main/employee/employeeDetail/employeeOperatioRecord", 
+    "endcheck": [
+      "employeeOperatioRecord", 
+      "operatio-record"
+    ]
+  }, 
+  {
+    "path": "/hrService", 
+    "name": "/m.main/hrService", 
+    "endcheck": [
+      "hrService", 
+      "/hrService"
+    ]
+  }, 
+  {
+    "path": "/salary", 
+    "name": "/m.main/salary", 
+    "endcheck": [
+      "salary", 
+      "/salary"
+    ]
+  }, 
+  {
+    "path": "/selfService", 
+    "name": "/m.main/selfService", 
+    "endcheck": [
+      "selfService", 
+      "/selfService"
+    ]
+  }, 
+  {
+    "path": "/socialsecurity", 
+    "name": "/m.main/socialsecurity", 
+    "endcheck": [
+      "socialsecurity", 
+      "/socialsecurity"
+    ]
+  }, 
+  {
+    "path": "/topic", 
+    "name": "/m.main/topic", 
+    "endcheck": [
+      "topic", 
+      "/topic"
+    ]
+  }, 
+  {
+    "path": "/ucenter", 
+    "name": "/m.main/ucenter", 
+    "endcheck": [
+      "ucenter", 
+      "/ucenter"
+    ]
+  }, 
+  {
+    "path": "/ucenter/account", 
+    "name": "/m.main/ucenter/ucenter.account", 
+    "endcheck": [
+      "ucenter.account", 
+      "account"
+    ]
+  }, 
+  {
+    "path": "/ucenter/account/my-account", 
+    "name": "/m.main/ucenter/ucenter.account/ucenter.account.my-account", 
+    "endcheck": [
+      "ucenter.account.my-account", 
+      "my-account"
+    ]
+  }, 
+  {
+    "path": "/ucenter/account/notify", 
+    "name": "/m.main/ucenter/ucenter.account/ucenter.account.notify", 
+    "endcheck": [
+      "ucenter.account.notify", 
+      "notify"
+    ]
+  }, 
+  {
+    "path": "/ucenter/account/security", 
+    "name": "/m.main/ucenter/ucenter.account/ucenter.account.security", 
+    "endcheck": [
+      "ucenter.account.security", 
+      "security"
+    ]
+  }, 
+  {
+    "path": "/ucenter/corp", 
+    "name": "/m.main/ucenter/ucenter.corp", 
+    "endcheck": [
+      "ucenter.corp", 
+      "corp"
+    ]
+  }, 
+  {
+    "path": "/ucenter/corp/info", 
+    "name": "/m.main/ucenter/ucenter.corp/ucenter.corp.info", 
+    "endcheck": [
+      "ucenter.corp.info", 
+      "info"
+    ]
+  }, 
+  {
+    "path": "/ucenter/corp/profile", 
+    "name": "/m.main/ucenter/ucenter.corp/ucenter.corp.profile", 
+    "endcheck": [
+      "ucenter.corp.profile", 
+      "profile"
+    ]
+  }, 
+  {
+    "path": "/ucenter/corp/upgrade", 
+    "name": "/m.main/ucenter/ucenter.corp/ucenter.corp.upgrade", 
+    "endcheck": [
+      "ucenter.corp.upgrade", 
+      "upgrade"
+    ]
+  }, 
+  {
+    "path": "/ucenter/corp/certify", 
+    "name": "/m.main/ucenter/ucenter.corp/ucenter.corp.certify", 
+    "endcheck": [
+      "ucenter.corp.certify", 
+      "certify"
+    ]
+  }, 
+  {
+    "path": "/ucenter/accounts", 
+    "name": "/m.main/ucenter/ucenter.accounts", 
+    "endcheck": [
+      "ucenter.accounts", 
+      "accounts"
+    ]
+  }, 
+  {
+    "path": "/ucenter/accounts/list", 
+    "name": "/m.main/ucenter/ucenter.accounts/ucenter.accounts.list", 
+    "endcheck": [
+      "ucenter.accounts.list", 
+      "list"
+    ]
+  }, 
+  {
+    "path": "/ucenter/accounts/activity", 
+    "name": "/m.main/ucenter/ucenter.accounts/ucenter.accounts.activity", 
+    "endcheck": [
+      "ucenter.accounts.activity", 
+      "activity"
+    ]
+  }, 
+  {
+    "path": "/ucenter/accounts/add", 
+    "name": "/m.main/ucenter/ucenter.accounts/ucenter.accounts.add", 
+    "endcheck": [
+      "ucenter.accounts.add", 
+      "add"
+    ]
+  }, 
+  {
+    "path": "/ucenter/accounts/:id/setting", 
+    "name": "/m.main/ucenter/ucenter.accounts/ucenter.accounts.setting", 
+    "endcheck": [
+      "ucenter.accounts.setting", 
+      ":id/setting"
+    ]
+  }, 
+  {
+    "path": "/ucenter/msg", 
+    "name": "/m.main/ucenter/ucenter.msg", 
+    "endcheck": [
+      "ucenter.msg", 
+      "msg"
+    ]
+  }, 
+  {
+    "path": "/ucenter/msg/notice", 
+    "name": "/m.main/ucenter/ucenter.msg/ucenter.msg.notice", 
+    "endcheck": [
+      "ucenter.msg.notice", 
+      "notice"
+    ]
+  }, 
+  {
+    "path": "/ucenter/msg/bulletin", 
+    "name": "/m.main/ucenter/ucenter.msg/ucenter.msg.bulletin", 
+    "endcheck": [
+      "ucenter.msg.bulletin", 
+      "bulletin"
+    ]
+  }, 
+  {
+    "path": "/ucenter/msg/bulletin/list", 
+    "name": "/m.main/ucenter/ucenter.msg/ucenter.msg.bulletin/ucenter.msg.bulletin.list", 
+    "endcheck": [
+      "ucenter.msg.bulletin.list", 
+      "list"
+    ]
+  }, 
+  {
+    "path": "/ucenter/msg/bulletin/detail/:id", 
+    "name": "/m.main/ucenter/ucenter.msg/ucenter.msg.bulletin/ucenter.msg.bulletin.detail", 
+    "endcheck": [
+      "ucenter.msg.bulletin.detail", 
+      "detail/:id"
+    ]
+  }, 
+  {
+    "path": "/ucenter/mark", 
+    "name": "/m.main/ucenter/ucenter.mark", 
+    "endcheck": [
+      "ucenter.mark", 
+      "mark"
+    ]
+  }, 
+  {
+    "path": "/ucenter/mark/billing", 
+    "name": "/m.main/ucenter/ucenter.mark/ucenter.mark.billing", 
+    "endcheck": [
+      "ucenter.mark.billing", 
+      "billing"
+    ]
+  }, 
+  {
+    "path": "/ucenter/mark/order", 
+    "name": "/m.main/ucenter/ucenter.mark/ucenter.mark.order", 
+    "endcheck": [
+      "ucenter.mark.order", 
+      "order"
+    ]
+  }, 
+  {
+    "path": "/ucenter/mark/invoice", 
+    "name": "/m.main/ucenter/ucenter.mark/ucenter.mark.invoice", 
+    "endcheck": [
+      "ucenter.mark.invoice", 
+      "invoice"
+    ]
+  }, 
+  {
+    "path": "/ucenter/mark/invoice/list", 
+    "name": "/m.main/ucenter/ucenter.mark/ucenter.mark.invoice/ucenter.mark.invoice.list", 
+    "endcheck": [
+      "ucenter.mark.invoice.list", 
+      "list"
+    ]
+  }, 
+  {
+    "path": "/ucenter/mark/invoice/:id/info", 
+    "name": "/m.main/ucenter/ucenter.mark/ucenter.mark.invoice/ucenter.mark.invoice.info", 
+    "endcheck": [
+      "ucenter.mark.invoice.info", 
+      ":id/info"
+    ]
+  }, 
+  {
+    "path": "/ucenter/mark/invoice/create", 
+    "name": "/m.main/ucenter/ucenter.mark/ucenter.mark.invoice/ucenter.mark.invoice.create", 
+    "endcheck": [
+      "ucenter.mark.invoice.create", 
+      "create"
+    ]
+  }, 
+  {
+    "path": "/welfare", 
+    "name": "/m.main/welfare", 
+    "endcheck": [
+      "welfare", 
+      "/welfare"
+    ]
+  }, 
+  {
+    "path": "/workbench", 
+    "name": "/m.main/workbench", 
+    "endcheck": [
+      "workbench", 
+      "/workbench"
+    ]
+  }, 
+  {
+    "path": "/workbench/desk", 
+    "name": "/m.main/workbench/desk", 
+    "endcheck": [
+      "desk", 
+      "desk"
+    ]
+  }, 
+  {
+    "path": "/workbench/desk/home", 
+    "name": "/m.main/workbench/desk/deskHome", 
+    "endcheck": [
+      "deskHome", 
+      "home"
+    ]
+  }, 
+  {
+    "path": "/workbench/desk/calendar", 
+    "name": "/m.main/workbench/desk/bigCalendar", 
+    "endcheck": [
+      "bigCalendar", 
+      "calendar"
+    ]
+  }, 
+  {
+    "path": "/workbench/desk/delay", 
+    "name": "/m.main/workbench/desk/delayEvent", 
+    "endcheck": [
+      "delayEvent", 
+      "delay"
+    ]
+  }, 
+  {
+    "path": "/workbench/laws", 
+    "name": "/m.main/workbench/laws", 
+    "endcheck": [
+      "laws", 
+      "laws"
+    ]
+  }, 
+  {
+    "path": "/workbench/laws/search", 
+    "name": "/m.main/workbench/laws/lawsSearch", 
+    "endcheck": [
+      "lawsSearch", 
+      "search"
+    ]
+  }, 
+  {
+    "path": "/workbench/laws/list", 
+    "name": "/m.main/workbench/laws/lawsList", 
+    "endcheck": [
+      "lawsList", 
+      "list"
+    ]
+  }, 
+  {
+    "path": "/404", 
+    "name": "/404", 
+    "endcheck": [
+      "404", 
+      "/404"
+    ]
+  }, 
+  {
+    "path": "/*", 
+    "name": "/notFound", 
+    "endcheck": [
+      "notFound", 
+      "*"
+    ]
+  }, 
+  {
+    "path": "/hrloo/fastlogin", 
+    "name": "/fastlogin", 
+    "endcheck": [
+      "fastlogin", 
+      "/hrloo/fastlogin"
+    ]
+  }, 
+  {
+    "path": "/signIn", 
+    "name": "/signIn", 
+    "endcheck": [
+      "signIn", 
+      "/signIn"
+    ]
+  }, 
+  {
+    "path": "/batch-add-contract", 
+    "name": "/batchAddContract", 
+    "endcheck": [
+      "batchAddContract", 
+      "/batch-add-contract"
+    ]
+  }, 
+  {
+    "path": "/batch-add-mobile", 
+    "name": "/batchAddMobile", 
+    "endcheck": [
+      "batchAddMobile", 
+      "/batch-add-mobile"
+    ]
+  }, 
+  {
+    "path": "/batch-add-pend", 
+    "name": "/batchAddPend", 
+    "endcheck": [
+      "batchAddPend", 
+      "/batch-add-pend"
+    ]
+  }, 
+  {
+    "path": "/batch-edit", 
+    "name": "/batchEdit", 
+    "endcheck": [
+      "batchEdit", 
+      "/batch-edit"
+    ]
+  }, 
+  {
+    "path": "/batch-import", 
+    "name": "/batchImport", 
+    "endcheck": [
+      "batchImport", 
+      "/batch-import"
+    ]
+  }, 
+  {
+    "path": "/batch-import-contract", 
+    "name": "/batchImportContract", 
+    "endcheck": [
+      "batchImportContract", 
+      "/batch-import-contract"
+    ]
+  }, 
+  {
+    "path": "/batch-renew-contract", 
+    "name": "/batchRenewContract", 
+    "endcheck": [
+      "batchRenewContract", 
+      "/batch-renew-contract"
+    ]
+  }, 
+  {
+    "path": "/batch-supplement", 
+    "name": "/batchSupplement", 
+    "endcheck": [
+      "batchSupplement", 
+      "/batch-supplement"
+    ]
+  }, 
+  {
+    "path": "/website", 
+    "name": "/website", 
+    "endcheck": [
+      "website", 
+      "/website"
+    ]
+  }, 
+  {
+    "path": "/website/home", 
+    "name": "/website/website.home", 
+    "endcheck": [
+      "website.home", 
+      "home"
+    ]
+  }, 
+  {
+    "path": "/website/agreement", 
+    "name": "/website/website.agreement", 
+    "endcheck": [
+      "website.agreement", 
+      "agreement"
+    ]
+  }, 
+  {
+    "path": "/website/version", 
+    "name": "/website/website.version", 
+    "endcheck": [
+      "website.version", 
+      "version"
+    ]
+  }, 
+  {
+    "path": "/website/product", 
+    "name": "/website/website.product", 
+    "endcheck": [
+      "website.product", 
+      "product"
+    ]
+  }, 
+  {
+    "path": "/website/productService", 
+    "name": "/website/website.productService", 
+    "endcheck": [
+      "website.productService", 
+      "productService"
+    ]
+  }, 
+  {
+    "path": "/website/voice", 
+    "name": "/website/website.voice", 
+    "endcheck": [
+      "website.voice", 
+      "voice"
+    ]
+  }, 
+  {
+    "path": "/website/about", 
+    "name": "/website/website.about", 
+    "endcheck": [
+      "website.about", 
+      "about"
+    ]
+  }, 
+  {
+    "path": "/website/clients", 
+    "name": "/website/website.clients", 
+    "endcheck": [
+      "website.clients", 
+      "clients"
+    ]
+  }, 
+  {
+    "path": "/website/security", 
+    "name": "/website/website.security", 
+    "endcheck": [
+      "website.security", 
+      "security"
+    ]
+  }, 
+  {
+    "path": "/test", 
+    "name": "/test", 
+    "endcheck": [
+      "test", 
+      "/test"
+    ]
+  }, 
+  {
+    "path": "/test/selectEmployee", 
+    "name": "/test/selectEmployee", 
+    "endcheck": [
+      "selectEmployee", 
+      "selectEmployee"
+    ]
+  }, 
+  {
+    "path": "/test/area", 
+    "name": "/test/area", 
+    "endcheck": [
+      "area", 
+      "area"
+    ]
+  }, 
+  {
+    "path": "/test/echarts", 
+    "name": "/test/echarts", 
+    "endcheck": [
+      "echarts", 
+      "echarts"
+    ]
+  }, 
+  {
+    "path": "/test/form-tip", 
+    "name": "/test/formTip", 
+    "endcheck": [
+      "formTip", 
+      "form-tip"
+    ]
+  }, 
+  {
+    "path": "/test/signIn", 
+    "name": "/test/test.signIn", 
+    "endcheck": [
+      "test.signIn", 
+      "signIn"
+    ]
+  }, 
+  {
+    "path": "/test/qrcode", 
+    "name": "/test/test.qrcode", 
+    "endcheck": [
+      "test.qrcode", 
+      "qrcode"
+    ]
+  }, 
+  {
+    "path": "/test/cropperUpload", 
+    "name": "/test/test.cropperUpload", 
+    "endcheck": [
+      "test.cropperUpload", 
+      "cropperUpload"
+    ]
+  }, 
+  {
+    "path": "/test/employeeRisk", 
+    "name": "/test/test.employeeRisk", 
+    "endcheck": [
+      "test.employeeRisk", 
+      "employeeRisk"
+    ]
+  }, 
+  {
+    "path": "/test/vote", 
+    "name": "/test/test.vote", 
+    "endcheck": [
+      "test.vote", 
+      "vote"
+    ]
+  }, 
+  {
+    "path": "/test/feedback", 
+    "name": "/test/test.feedback", 
+    "endcheck": [
+      "test.feedback", 
+      "feedback"
+    ]
+  }, 
+  {
+    "path": "/test/spreedSheet", 
+    "name": "/test/test.spreedSheet", 
+    "endcheck": [
+      "test.spreedSheet", 
+      "spreedSheet"
+    ]
+  }, 
+  {
+    "path": "/test/spreedSheetNew", 
+    "name": "/test/test.spreedSheetNew", 
+    "endcheck": [
+      "test.spreedSheetNew", 
+      "spreedSheetNew"
+    ]
+  }, 
+  {
+    "path": "/test/form", 
+    "name": "/test/test.form", 
+    "endcheck": [
+      "test.form", 
+      "form"
+    ]
+  }, 
+  {
+    "path": "/test/checkbox-button-group", 
+    "name": "/test/test.checkboxButtonGroup", 
+    "endcheck": [
+      "test.checkboxButtonGroup", 
+      "checkbox-button-group"
+    ]
+  }, 
+  {
+    "path": "/test/search-filter", 
+    "name": "/test/test.searchFilter", 
+    "endcheck": [
+      "test.searchFilter", 
+      "search-filter"
+    ]
+  }, 
+  {
+    "path": "/test/caption", 
+    "name": "/test/test.caption", 
+    "endcheck": [
+      "test.caption", 
+      "caption"
+    ]
+  }, 
+  {
+    "path": "/test/employeeRiskModal", 
+    "name": "/test/test.employeeRiskModal", 
+    "endcheck": [
+      "test.employeeRiskModal", 
+      "employeeRiskModal"
+    ]
+  }, 
+  {
+    "path": "/test/preview", 
+    "name": "/test/test.preview", 
+    "endcheck": [
+      "test.preview", 
+      "preview"
+    ]
+  }
+]

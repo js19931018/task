@@ -19,5 +19,5 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^fileanalysis/', include('fileanalysis.urls'))
+    url(r'^logana/', include('logana.urls'))
 ]
