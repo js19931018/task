@@ -77,11 +77,12 @@ WSGI_APPLICATION = 'tasktwo.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'teach_populate',
+        'NAME': 'logmessage',
         'USER': 'root',
         'PASSWORD': '666666',
         'HOST': 'localhost',
         'PORT': '3306',
+        'OPTIONS': {'charset': 'utf8'}
 
     }
 }
@@ -104,7 +105,7 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
+DATA_UPLOAD_MAX_MEMORY_SIZE = 9242880
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/

@@ -21,6 +21,7 @@ import logging
 from django.shortcuts import render
 
 def search(request, keywords):
+
     return HttpResponse('get keywords')
 
 
