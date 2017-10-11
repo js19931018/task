@@ -23,6 +23,18 @@ class Logdata(models.Model):
     ip_region = models.CharField(max_length=100,default=None)
     ip_city = models.CharField(max_length=100,default=None)
 
+class Clientip():
+    ip=models.CharField(max_length=100)
+    region=models.CharField(max_length=100)
+    accesstime=models.CharField(max_length=10)
+
+class Analyzedata():
+    time =models.CharField(max_length=50)
+    ip_message=models.TextField(max_length=30000)
+    page_massage=models.TextField(max_length=30000)
+
+
+
 
 
 

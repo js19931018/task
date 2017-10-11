@@ -6,6 +6,8 @@ import django_redis
 import threading
 import urlparse,urllib,json
 import logging
+
+
 from time import sleep,ctime
 from django.http import HttpResponse
 from logana.models import Logdata
@@ -30,6 +32,9 @@ get_ip_thread=[]
 PRODUCENUM=100
 THREAD_QUEUE=Queue(100)
 QUERY_QUEUE=Queue(100)
+check_thread=[]
+countdict={}
+page_dict={}
 class Query_Queue_Func(object):
     def __init__(self,func,args,name=''):
         self.queue=QUERY_QUEUE
@@ -118,6 +123,10 @@ def logrequest_skethy(request):
                 loglist.append(alog)
             else:
                 iplist.append(alog[8])
+                if page_dict.has_key(alog[4]):
+                    page_dict[alog[4]] += 1
+                else:
+                    page_dict[alog[4]] = 1
                 l = Logdata(date=alog[0], time=alog[1], s_ip=alog[2], cs_method=alog[3], cs_uri_stem=alog[4], cs_uri_query=alog[5], s_port=alog[6], cs_username=alog[7], c_ip=alog[8], cs_user_agent=alog[9],sc_status=alog[10], sc_substatus=alog[11], sc_win32_status=alog[12], time_taken=alog[13], ip_region='unknown', ip_city='unknown')
                 querylist.append(l)
                 if len(querylist) >= PRODUCENUM:
@@ -126,10 +135,33 @@ def logrequest_skethy(request):
         logger.info('end handle line %s' %ctime())
         thread_check_id = threading.Thread(target=quick_check_id, args=(iplist,))
         thread_check_id.start()
+        thread_region_count = threading.Thread(target=region_count, args=(thread_check_id,))
+        thread_region_count.start()
+        check_thread.append(thread_region_count)
         return HttpResponse('OK')
 
 def get_quick_check_id(request):
     return HttpResponse(str(iddict_quick))
+
+def get_region_count(request):
+    return HttpResponse('%s\n\n%s'%(str(countdict),str(page_dict)))
+
+
+def region_count(thread,quick=True):
+    if quick==True:
+        usedict=iddict_quick
+    else:
+        usedict=iddict
+    thread.join()
+    logger.info('start region count...')
+
+    for k,v in usedict.items():
+        if countdict.has_key(v[0]):
+            countdict[v[0]][1] = countdict[v[0]][1]+v[1]
+            countdict[v[0]][0].append({k:v[1]})
+        else:
+            countdict[v[0]] = [[{k:v[1]}], v[1]]
+    logger.info('end region count.')
 
 
 
@@ -152,10 +184,11 @@ def quick_check_id(iplist):
     logger.info('%s,ipnum:%s' % (str(iddict_quick), ip_num))
 
 
+def get_check_id(request):
+    check_id()
+    return HttpResponse(str(iddict))
 
-
-
-def check_id(request):
+def check_id():
     iddict.clear()
     logdata = Logdata.objects.exclude(c_ip=LIP)
     num = len(logdata)
@@ -163,17 +196,16 @@ def check_id(request):
 
     g = (x * 10 + 1 for x in range(num//10))
     for i in g:
-        logger.info('logdata %s'%i)
+
         c_ip = logdata[i].c_ip
         if iddict.has_key(c_ip):
             sleep(0.12)
             iddict[c_ip][1] = iddict[c_ip][1]+1
         else:
+            logger.info('check logdata %s' % i)
             iddict[c_ip] = [get_ip(c_ip)['data']['region'], 1]
 
     logger.info('%s'%(str(iddict)))
-    return HttpResponse(str(iddict))
-
 
 def get_ip(ip):
     qurey = 'ip=%s' % ip
@@ -184,6 +216,8 @@ def get_ip(ip):
     logger.info('GET: id:%s,region:%s'%(ip, info['data']['region']))
     return info
 
+def save_analyze_message():
+    pass
 
 def save():
     pass

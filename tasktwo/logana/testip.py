@@ -1,7 +1,8 @@
 #coding=utf-8
 import urlparse,urllib,json
-
-
+from datetime import time
+from datetime import date
+import requests
 
 
 scheme = 'http'
@@ -9,7 +10,7 @@ netloct = 'ip.taobao.com'
 path = '/service/getIpInfo.php'
 params = ''
 fragment = ''
-
+mydict={'1':[1,2,3], '2':[4,5,6]}
 
 def get_ip(ip):
     qurey='ip=%s'%ip
@@ -21,9 +22,9 @@ def get_ip(ip):
     print info
     return info
 
+def time():
+    timestr='08:03:16'
 
 if __name__ == '__main__':
-    get_ip('113.91.87.185')
-    print u'\u5e7f\u4e1c\u7701'.encode('utf-8')
-    print '亚马逊'
-
+    for k,v in mydict.items():
+        print k,v
