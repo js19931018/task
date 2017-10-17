@@ -16,15 +16,29 @@ def get_ip(ip):
     qurey='ip=%s'%ip
     tp=(scheme, netloct, path, params, qurey, fragment)
     url=urlparse.urlunparse(tp)
-    print url
-    response=urllib.urlopen(url)
-    info=json.load(response)
+    response=requests.get(url, timeout=15)
+    info=json.loads(response.text)
     print info
     return info
+
+def get_city(ip):
+    try:
+        res=get_ip(ip)
+        return [ip, res['data']['city_id']]
+    except:
+        pass
+
+def get_region(ip):
+    try:
+        res = get_ip(ip)
+        return [ip, res['data']['region_id']]
+    except:
+        pass
+
+
 
 def time():
     timestr='08:03:16'
 
 if __name__ == '__main__':
-    for k,v in mydict.items():
-        print k,v
+   print get_city('117.136.1.254')

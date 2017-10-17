@@ -10,7 +10,7 @@ import logging
 
 from time import sleep,ctime
 from django.http import HttpResponse
-from logana.models import Logdata
+from logana.models import Logdata,Clientip
 from exceptions import KeyError
 from Queue import Queue
 
@@ -35,6 +35,8 @@ QUERY_QUEUE=Queue(100)
 check_thread=[]
 countdict={}
 page_dict={}
+ip_region={}
+
 class Query_Queue_Func(object):
     def __init__(self,func,args,name=''):
         self.queue=QUERY_QUEUE
@@ -144,7 +146,7 @@ def get_quick_check_id(request):
     return HttpResponse(str(iddict_quick))
 
 def get_region_count(request):
-    return HttpResponse('%s\n\n%s'%(str(countdict),str(page_dict)))
+    return HttpResponse('%s\n\n%s'%(str(countdict), str(page_dict)))
 
 
 def region_count(thread,quick=True):
@@ -175,13 +177,14 @@ def quick_check_id(iplist):
         logger.info('logdata %s' % i)
         c_ip = iplist[i]
         if iddict_quick.has_key(c_ip):
-
             iddict_quick[c_ip][1] = iddict_quick[c_ip][1] + 1
         else:
             sleep(0.12)
             iddict_quick[c_ip] = [get_ip(c_ip)['data']['region'], 1]
             ip_num=ip_num+1
+    save_ip()
     logger.info('%s,ipnum:%s' % (str(iddict_quick), ip_num))
+
 
 
 def get_check_id(request):
@@ -215,6 +218,23 @@ def get_ip(ip):
     info = json.load(response)
     logger.info('GET: id:%s,region:%s'%(ip, info['data']['region']))
     return info
+
+def save_ip():
+    #ipsavelist=[]
+    #for k,v in iddict_quick.items():
+     #   i=Clientip(ip=k, region=v[0], accesstimes=v[1] )
+     #   ipsavelist.append(i)
+    #update_ip()
+    #Clientip.objects.bulk_create(ipsavelist)
+    pass
+
+def update_ip():
+    #ip_region.clear()
+    #lst=Clientip.objects.all()
+    #for i in lst:
+     #   ip_region[i[0]]=i[1]
+    #logger.info('update ip-region list')
+    pass
 
 def save_analyze_message():
     pass

@@ -5,8 +5,8 @@ from __future__ import unicode_literals
 from django.db import models
 
 class Logdata(models.Model):
-    date = models.CharField(max_length=200)
-    time = models.CharField(max_length=200)
+    date = models.DateField(max_length=200)
+    time = models.TimeField(max_length=200)
     s_ip = models.CharField(max_length=200)
     cs_method = models.CharField(max_length=200)
     cs_uri_stem = models.CharField(max_length=200)
@@ -23,15 +23,29 @@ class Logdata(models.Model):
     ip_region = models.CharField(max_length=100,default=None)
     ip_city = models.CharField(max_length=100,default=None)
 
-class Clientip():
+class Clientip(models.Model):
     ip=models.CharField(max_length=100)
     region=models.CharField(max_length=100)
-    accesstime=models.CharField(max_length=10)
 
 class Analyzedata():
     time =models.CharField(max_length=50)
     ip_message=models.TextField(max_length=30000)
     page_massage=models.TextField(max_length=30000)
+
+class Regionid(models.Model):
+    c_id = models.IntegerField(max_length=50)
+    c_name = models.CharField(max_length=50)
+    c_pid =models.IntegerField(max_length=50)
+    c_sina_code = models.CharField(max_length=50)
+    c_sina_id = models.IntegerField(max_length=50)
+    C_sina_pid = models.IntegerField(max_length=50)
+    c_alias= models.CharField(max_length=50)
+    c_pinyin =models.CharField(max_length=50)
+    c_pinyin_lite =models.CharField(max_length=50)
+    c_sort=models.CharField(max_length=50)
+
+
+
 
 
 
