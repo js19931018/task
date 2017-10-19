@@ -23,9 +23,23 @@ class Logdata(models.Model):
     ip_region = models.CharField(max_length=100,default=None)
     ip_city = models.CharField(max_length=100,default=None)
 
-class Clientip(models.Model):
-    ip=models.CharField(max_length=100)
+class Netregion(models.Model):
+    net=models.CharField(max_length=100, primary_key=True)
     region=models.CharField(max_length=100)
+    iptype=models.CharField(max_length=100)
+    version=models.CharField(max_length=100)
+
+
+class Ipnet(models.Model):
+    ip=models.CharField(max_length=100, primary_key=True)
+    net=models.CharField(max_length=100)
+
+
+
+class Regioncount(models.Model):
+    region = models.CharField(max_length=100)
+    num = models.IntegerField(max_length=20)
+    logdatename = models.CharField(max_length=100)
 
 class Analyzedata():
     time =models.CharField(max_length=50)

@@ -10,7 +10,7 @@ import logging
 
 from time import sleep,ctime
 from django.http import HttpResponse
-from logana.models import Logdata,Clientip
+from logana.models import Logdata
 from exceptions import KeyError
 from Queue import Queue
 
