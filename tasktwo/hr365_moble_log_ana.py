@@ -29,7 +29,7 @@ dict3={}   #netregion-dict {ipnet1:{ version:xxx ,region:xxx, iptype:xxx}...}
 dict4={}   #region-dict {region1:num...}
 searchnum={}
 
-filelist=['/home/jsw/DianMi.HR365-API-2015-07-31.log']
+filelist=['/home/jsw/DianMi.HR365-API-2015-08-31.log']
 
 
 def openfile(list):
@@ -240,6 +240,9 @@ def get_result():
          json.dump(dict1, dict1_js)
 
     return dict1
+
+
+
 
 
 if __name__ == '__main__':
