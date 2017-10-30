@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from qiniu import Auth,put_data
 from qiniu.utils import urlsafe_base64_encode
 from qiniu.services.processing.pfop import PersistentFop
@@ -9,21 +10,21 @@ class QiniuStorage(object):
 
 
 
-    def __init__(self):
+    def __init__(self):  #instanciate a Auth object with AK,SK
         self.q = Auth(settings.QINIU_ACCESS_KEY, settings.QINIU_SECRET_KEY)
         self.bucket = settings.QINIU_PRIVATE_BUCKET_NAME
         self.domain = settings.QINIU_PRIVATE_DOMAIN
         self.key=None
-    def upload_token(self, ie=False):
+    def upload_token(self, ie=False):     #got a token coding with policy and SK,when updating with policy ,it must get a corresponding token
         key = str(uuid.uuid4()).replace('-', '')
         key = 'ie_' + key if ie else key
         return key, self.q.upload_token(self.bucket, key=key)
 
-    def upload_data(self, data, mime_type='application/octet-stream', ie=True):
+    def upload_data(self, data, mime_type='application/octet-stream', ie=True): #using it to upload a data
         key, token = self.upload_token(ie)
         ret, info = put_data(token, key, data, mime_type=mime_type)
         self.key = key
-        if ret['key'] != key:
+        if ret['key'] != key:          # key is the key of the updated data
             raise Code.file_update_fail
         return key
 
@@ -41,7 +42,7 @@ class QiniuStorage(object):
         url='%s%s'%("?{}".format(key),"?{}".format(file_name)) if file_name else "/{}".format(key)
 
         base_url = self.domain+url
-        return self.q.private_download_url(base_url)
+        return self.q.private_download_url(base_url,expires=36000)
 
     def download(self, key):
         url = self.down_url(key)
@@ -55,7 +56,7 @@ class QiniuStorage(object):
         return self.q.verify_callback(auth, settings.QINIU_CALLBACK,
                                       request.body)
 
-    def persistent_with_pfop(self,perstr,fops):
+    def persistent_with_pfop(self,perstr,fops):#persistenet operations with fop sentence.the result save as 'origin key+perstr'
         auth = self.q
         bucket_name = self.bucket
         saveas_key = self.key + perstr
@@ -67,7 +68,7 @@ class QiniuStorage(object):
         ret, info=pfop.execute(self.key, [fops], 1)
         return [ret,info]
 
-    def persistent_with_pfop_nfop(self,perstr,fops):
+    def persistent_with_pfop_nfop(self,perstr,fops):#persistent fop operation with nums of fop execute sentence
         auth = self.q
         bucket_name =self.bucket
         foplist=[]

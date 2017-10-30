@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from qiniustorage import *
 from io import StringIO,BytesIO
 class Qiniuupdate(object):
@@ -19,9 +20,13 @@ class Qiniuupdate(object):
         r=self.q.persistent_with_pfop('imgview2mode%sw%sh%s'%(mode, w, h),fops)
         return r
 
-
-
-q=Qiniuupdate('/home/jsw/jswimg1.png')
-t=q.get_url('jswimg1')
-print t
-h=q.imgview(0,64,48)
+def get_a_down_url():
+    q=QiniuStorage()
+    r=q.down_url('ie_0ea63c5d287840b2a9600701d8306f3e')
+    return r
+if __name__ == '__main__':
+  r=get_a_down_url()
+#q=Qiniuupdate('/home/jsw/bigimg1.jpeg')
+#t=q.get_url('bigimg1')
+#print t
+#h=q.imgview(0,64,48)

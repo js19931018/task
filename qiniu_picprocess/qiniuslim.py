@@ -10,6 +10,10 @@ class EmployeeAttachmentSimpleSlim(object):
         return r
 
 class EmploymentAttachmentSlim(object):
+    #using key,type of employee image to choose type of slim method
+    #thumbnaillarge/smallname is the name of pfop result of getting thumbnails ,saving as"origin keyname"+"thumbnaillargename/smallname",when none,it uses "large"/"small"
+    #when newupdate is False ,it doesn't produce thumbnail picture.just slim and cover ori img
+
     def __init__(self,attachment_id,key,typeid, newupdate=False,thumbnaillargename=None, thumbnailsmallname=None, ):
         self.attachment_id = attachment_id
         self.key = key
@@ -19,13 +23,13 @@ class EmploymentAttachmentSlim(object):
         self.thumbnaillargename = thumbnaillargename
         self.thumbnailsmallname = thumbnailsmallname
         self.type = typeid
-        if self.type=='1':
+        if self.type==1:
             self.slim=EmployeePortraitSlim(self.attachment_id,self.key,self.newupdate,self.thumbnaillargename,self.thumbnailsmallname)
-        elif self.type=='2':
+        elif self.type==2:
             self.slim=EmployeeIdentificationPictureSlim(self.attachment_id,self.key,self.newupdate,self.thumbnaillargename,self.thumbnailsmallname)
-        elif self.type=='3':
+        elif self.type==3:
             self.slim=EmployeeCertificationSlim(self.attachment_id,self.key,self.newupdate,self.thumbnailsmallname)
-        elif self.type=='4':
+        elif self.type==4:
             self.slim=EmployeeCertificateSlim(self.attachment_id,self.key,self.newupdate,self.thumbnailsmallname)
         else :
             self.slim=EmployeeIdentificationSlim(self.attachment_id,self.key,self.newupdate,self.thumbnailsmallname)
@@ -37,6 +41,9 @@ class EmploymentAttachmentSlim(object):
 
 
 class EmployeePortraitSlim(object):
+    # when the ori img is too small, it doesn't slim
+    # thumbnail is not 300x300/50x50,the longer edge is smaller than 300/50,select and uniform scale
+    # the following methods is  similar
     def __init__(self,attachment_id,key,newupdate=False,thumbnaillargename=None,thumbnailsmallname=None):
         self.attachment_id = attachment_id
         self.key = key
@@ -97,7 +104,7 @@ class EmployeeCertificationSlim(object):
         self.q = QiniuStorage()
         self.q.get_key(key)
         self.newupdate=newupdate
-        self.thumbnailsmallname=thumbnailsmallname
+        self.thumbnailsmallname=thumbnailsmallname if not thumbnailsmallname == None else 'small'
     def start_slim(self):
         if self.newupdate:
             r = self.start_slim_get_thumbnail()
@@ -122,7 +129,7 @@ class EmployeeCertificateSlim(object):
         self.q = QiniuStorage()
         self.q.get_key(key)
         self.newupdate = newupdate
-        self.thumbnailsmallname = thumbnailsmallname
+        self.thumbnailsmallname = thumbnailsmallname if not thumbnailsmallname == None else 'small'
 
 
     def start_slim(self):
@@ -148,7 +155,7 @@ class EmployeeIdentificationSlim(object):
         self.q = QiniuStorage()
         self.q.get_key(key)
         self.newupdate = newupdate
-        self.thumbnailsmallname = thumbnailsmallname
+        self.thumbnailsmallname = thumbnailsmallname if not thumbnailsmallname == None else 'small'
 
 
     def start_slim(self):
