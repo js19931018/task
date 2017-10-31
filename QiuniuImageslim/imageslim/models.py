@@ -36,7 +36,7 @@ class EmployeeAttachmentSlimLog(models.Model):
     key = models.CharField(verbose_name='附件的key', max_length=500, null=True, blank=True, db_column='c_attachment_url')
     persistent_id= models.CharField(verbose_name='数据处理ID',max_length=100,null=True,db_column='c_persistent_id')
     is_slimed=models.BooleanField(default=False,db_column='c_is_slimed')
-
+    got_size=models.BooleanField(default=False,db_column='c_got_size')
 
 
 

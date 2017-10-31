@@ -41,8 +41,8 @@ class QiniuStorage(object):
             'utf8')) if file_name else ''
         url='%s%s'%("?{}".format(key),"?{}".format(file_name)) if file_name else "/{}".format(key)
 
-        base_url = self.domain+url
-        return self.q.private_download_url(base_url,expires=36000)
+        base_url = 'http://'+self.domain+url
+        return self.q.private_download_url(base_url)
 
     def download(self, key):
         url = self.down_url(key)

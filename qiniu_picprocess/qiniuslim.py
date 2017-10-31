@@ -1,4 +1,5 @@
 from qiniustorage import *
+import requests
 class EmployeeAttachmentSimpleSlim(object):
     def __init__(self, attachment_id, key):
         self.attachment_id=attachment_id
@@ -36,6 +37,11 @@ class EmploymentAttachmentSlim(object):
 
     def start_slim(self):
         self.slim.start_slim()
+
+    def get_img_info(self):
+        r = self.q.down_url('%s%s'%(self.key,'?imageInfo'))
+        resp = requests.get(r)
+        return resp.content
 
 
 

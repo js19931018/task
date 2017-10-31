@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from qiniustorage import *
 from io import StringIO,BytesIO
+import requests
 class Qiniuupdate(object):
     def __init__(self,filepath):
         self.filepath=filepath
@@ -22,8 +23,9 @@ class Qiniuupdate(object):
 
 def get_a_down_url():
     q=QiniuStorage()
-    r=q.down_url('ie_0ea63c5d287840b2a9600701d8306f3e')
-    return r
+    r=q.down_url('ie_0ea63c5d287840b2a9600701d8306f3e?imageInfo')
+    re=requests.get(r)
+    return re
 if __name__ == '__main__':
   r=get_a_down_url()
 #q=Qiniuupdate('/home/jsw/bigimg1.jpeg')
