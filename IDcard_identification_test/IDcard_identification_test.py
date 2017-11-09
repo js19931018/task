@@ -1,20 +1,44 @@
+#  -*- coding: utf-8 -*-
+from shenfenzheng5 import *
+import pickle
 tstdict={'longerr':'3306811995020103391',
          'regionerr':'100681199502010339',
          'illegalstr':'330681199502010B39',
          'birtherr':'330681199951312025',
          'verifyerr':'330681199502010338',
-         'pass':'330681199502010339'
+         'pass':'330681199502010339',
+         'sex':'330681199502010339',
+         'sex1':'330681199502010349',
+         'sex_15':'330681950201033'
          }
 
-errormessage={'pass':'',
-              'errtype1':'longerr',
-              'errtype2':'',
-              'errtype3':'',
-              'errtype4':''}
+resultmessage={'pass':'correct',
+              'errtype1':'long incorrect',
+              'errtype2':'region incorrect',
+              'errtype3':'date incorrect',
+              'errtype4':'verify incorrect',
+               'female':'female',
+               'male':'male'
+               }
 
-def checkid(id):
-    if id=='3306811995020103391':
-        return 'longerr'
+testloglst=[]
+
+
+def savelog(asrt_res,res,method, id):
+    testlog={}
+    testlog['asrt_res']=asrt_res
+    testlog['res']=res
+    testlog['test_func']=method
+    testlog['test_id']=id
+
+    print testlog
+    print testloglst
+    testloglst.append(testlog)
+    print testloglst
+    with open('idcard_identification_testlog.pkl', 'r+') as pickle_file:
+
+        pickle.dump(testloglst, pickle_file)
+
 
 
 
@@ -31,6 +55,7 @@ class TestId(object):
     test = Testmethod()
 
     def asrt_eq(self,res):
+        savelog(self.asrt_res, res, self.method[0].__name__, self.id)
         assert self.asrt_res==res
 
     @classmethod
@@ -40,42 +65,60 @@ class TestId(object):
 
 
 class TestIDlong(TestId):
-    def __init__(self):
-        TestId.__init__(self, tstdict['longerr'], errormessage['errtype1'])
+    def __init__(self, id ,asrt_res):
+        TestId.__init__(self, id, asrt_res)
 
 class TestIDregion(TestId):
-    def __init__(self):
-        TestId.__init__(self,tstdict['regionerr'], errormessage['errtype2'])
+    def __init__(self, id, asrt_res):
+        TestId.__init__(self, id, asrt_res)
 
 class TestIDbirth(TestId):
-    def __init__(self):
-        TestId.__init__(self,tstdict['birtherr'], errormessage['errtype3'])
+    def __init__(self, id, asrt_res):
+        TestId.__init__(self, id, asrt_res)
 
-class TestIDillegalstr(TestId):
-    def __init__(self):
-        TestId.__init__(self,tstdict['illegalstr'], errormessage['errtype4'])
+
 
 class TestIDverify(TestId):
-    def __init__(self):
-        TestId.__init__(self,tstdict['regionerr'], errormessage['errtype4'])
+    def __init__(self, id, asrt_res):
+        TestId.__init__(self, id, asrt_res)
 
-class TestIDpass(TestId):
-    def __init__(self):
-        TestId.__init__(self, tstdict['pass'], errormessage['pass'])
 
-def testall(tstfunc):
-    TestId.setmethod(checkid)
-    s = TestIDlong()
+
+class TestIDSex(TestId):
+    def __init__(self, id, asrt_res):
+        TestId.__init__(self, id, asrt_res)
+
+def setmethod():
+    TestIDlong.setmethod(checkLen)
+    TestIDregion.setmethod(checkCity)
+    TestIDbirth.setmethod(checkDate)
+    TestIDverify.setmethod(checkByte)
+    TestIDSex.setmethod(checksex)
+
+def testall():
+
+    s = TestIDlong(tstdict['longerr'], resultmessage['errtype1'])
     s.test
-    s = TestIDregion()
+
+    s = TestIDregion(tstdict['regionerr'], resultmessage['errtype2'])
     s.test
-    s = TestIDbirth()
+
+    s = TestIDbirth(tstdict['birtherr'], resultmessage['errtype3'])
     s.test
-    s = TestIDillegalstr()
+
+    s = TestIDbirth(tstdict['illegalstr'], resultmessage['errtype3'])
     s.test
-    s = TestIDverify()
+
+    s = TestIDverify(tstdict['regionerr'], resultmessage['errtype4'])
     s.test
-    s = TestIDpass()
+
+    s = TestIDSex(tstdict['sex'], resultmessage['male'])
+    s.test
+
+    s = TestIDSex(tstdict['sex1'], resultmessage['female'])
+    s.test
+
+    s = TestIDSex(tstdict['sex_15'], resultmessage['male'])
     s.test
 
 
@@ -85,4 +128,5 @@ def testall(tstfunc):
 
 
 if __name__ == '__main__':
-    testall(checkid)
+    setmethod()
+    testall()
