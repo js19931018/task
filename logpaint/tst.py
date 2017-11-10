@@ -12,7 +12,7 @@ from mpl_toolkits.mplot3d  import Axes3D
 
 arr=[]
 
-mpl.rcParams['font.size']=10
+mpl.rcParams['font.size'] = 10
 
 fig=plt.figure()
 
