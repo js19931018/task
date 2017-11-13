@@ -88,12 +88,15 @@ class TestIDSex(TestId):
     def __init__(self, id, asrt_res):
         TestId.__init__(self, id, asrt_res)
 
+
+
 def setmethod():
     TestIDlong.setmethod(checkLen)
     TestIDregion.setmethod(checkCity)
     TestIDbirth.setmethod(checkDate)
     TestIDverify.setmethod(checkByte)
     TestIDSex.setmethod(checksex)
+
 
 def testall():
 
@@ -120,6 +123,8 @@ def testall():
 
     s = TestIDSex(tstdict['sex_15'], resultmessage['male'])
     s.test
+
+
 
 
 
