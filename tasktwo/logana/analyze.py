@@ -2,7 +2,6 @@
 import json
 import re
 import logging
-import django_redis
 import threading
 import urlparse,urllib,json
 import logging

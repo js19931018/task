@@ -41,10 +41,7 @@ class Regioncount(models.Model):
     num = models.IntegerField(max_length=20)
     logdatename = models.CharField(max_length=100)
 
-class Analyzedata():
-    time =models.CharField(max_length=50)
-    ip_message=models.TextField(max_length=30000)
-    page_massage=models.TextField(max_length=30000)
+
 
 class Regionid(models.Model):
     c_id = models.IntegerField(max_length=50)
@@ -58,6 +55,11 @@ class Regionid(models.Model):
     c_pinyin_lite =models.CharField(max_length=50)
     c_sort=models.CharField(max_length=50)
 
+
+class Analyzedata(models.Model):
+    time =models.CharField(max_length=50)
+    ip_message=models.TextField(max_length=30000)
+    page_massage=models.TextField(max_length=30000)
 
 
 

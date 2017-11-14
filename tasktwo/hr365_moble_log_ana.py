@@ -1,4 +1,4 @@
-#coding=utf-8
+#-*- coding: utf-8 -*-
 import os
 import sys
 import django
@@ -6,8 +6,9 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "tasktwo.settings")
 django.setup()
 
 import json
+from django.db import connection
 from logana.testip import get_ip, get_region
-from logana.models import Netregion,Ipnet,Regioncount
+from logana.models import Netregion,Ipnet,Regioncount,Analyzedata
 from time import sleep
 from Queue import Queue
 import threading
@@ -15,7 +16,8 @@ import logging
 from exceptions import KeyError
 from IPy import *
 from logana.iphandle import handleip,singleip
-
+from logpaint_reuse import getresult
+from paint import showresult
 
 
 logging.basicConfig(level=logging.INFO)
@@ -241,13 +243,27 @@ def get_result():
 
     return dict1
 
+def output_and_paint():
+    l=Regioncount.objects.all()
+    lh=[]
+    for i in l:
+        lh.append([i.id,i.region,int(i.num),i.logdatename])
+    print 'lh',lh
+    print len(lh)
+    r=getresult(lh)
+    print 'r', r
+    showresult(r,u'海南省')
+    return  r
+
+
 
 
 
 
 if __name__ == '__main__':
-   openfile(filelist)
+   #openfile(filelist)
    #get_result()
+   output_and_paint()
 
 
 
